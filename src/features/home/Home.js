@@ -8,13 +8,13 @@ const StyledHome = styled.div`
 `
 
 function Home () {
-    return(
+  return (
     <StyledHome>
-        <a href="/"> Home</a>
-        <a href="/counter"> Counter</a>
-        <a href="/mycounter"> MyCounter</a>
+      <a href="/"> Home</a>
+      <a href="/counter"> Counter</a>
+      <a href="/mycounter"> MyCounter</a>
     </StyledHome>
-    )
+  )
 }
 
 

@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.3",
@@ -19,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js":"stylelint ./src/**/*.js",
+    "eslint:all": "eslint --ext .js --fix ./",
+    "lint:js": "stylelint ./src/**/*.js",
     "lint:all": "stylelint ./src/**/*.js --fix"
   },
   "eslintConfig": {
