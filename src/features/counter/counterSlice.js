@@ -20,6 +20,12 @@ export const incrementAsync = createAsyncThunk(
   }
 )
 
+export const incrementAsync2 = amount => dispatch => {
+  setTimeout(() => {
+    dispatch(incrementByAmount(amount))
+  }, 1000)
+}
+
 export const counterSlice = createSlice({
   name: 'counter',
   initialState,

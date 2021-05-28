@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { counterSlice } from '../counter/counterSlice'
 
 const initialState = {
   value: 0,
