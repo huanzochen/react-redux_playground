@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { createEntityAdapter } from '@reduxjs/toolkit'
 
 const initialState = {
   repos:[],
@@ -11,7 +12,7 @@ export const fetchRepos = createAsyncThunk('github/fetchRepos', async() => {
     'Accept': 'application/vnd.github.v3+json',
     'User-Agent': 'Thunder Client (https://www.thunderclient.io)'
   }
-  const response = await fetch('https://api.github.com/users/huanzochen/repos', { 
+  const response = await fetch('https://api.githubs.com/users/huanzochen/repos', { 
     method: 'GET',
     headers: headersList
   })
@@ -31,6 +32,10 @@ const githubSlice = createSlice({
     [fetchRepos.fulfilled]:(state, action) => {
       state.repoStatus = 'succeeded'
       state.repos = action.payload
+    },
+    [fetchRepos.rejected]:(state, action) => {
+      state.repoStatus = 'failed'
+      state.error = action.error.message
     }
   }
 })

@@ -5,7 +5,6 @@ import {
   fetchRepos 
 } from './githubSlice'
 
-
 let RepoList = ({ repo }) => {
   return (
     <div>
@@ -23,6 +22,7 @@ function GitHub() {
   const dispatch = useDispatch()
   const repoStatus = useSelector(state => state.github.repoStatus)
   const repos = useSelector(state => state.github.repos)
+  const error = useSelector(state => state.github.error)
 
   useEffect(() => {
     if (repoStatus === 'idle') {
@@ -36,6 +36,9 @@ function GitHub() {
   } 
   else if (repoStatus === 'succeeded') {
     content = repos.map(repo => <RepoList key={repo.id} repo={repo}></RepoList>)
+  }
+  else if (repoStatus === 'failed') {
+    content = <div className='repo'> {error} </div>
   }
 
   return (
