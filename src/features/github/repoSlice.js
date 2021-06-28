@@ -21,7 +21,7 @@ export const fetchRepos = createAsyncThunk('github/fetchRepos', async() => {
 })
 
 const repoSlice = createSlice({
-  name:'github',
+  name:'repo',
   initialState,
   reducers: {
 
