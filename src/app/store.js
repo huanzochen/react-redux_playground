@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from '../features/counter/counterSlice'
 import mycounterReducer from '../features/mycounter/mycounterSlice'
-import githubReducer from '../features/github/githubSlice'
+import repoReducer from '../features/github/repoSlice'
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
     mycounter: mycounterReducer,
-    github: githubReducer
+    repos: repoReducer
   },
 })

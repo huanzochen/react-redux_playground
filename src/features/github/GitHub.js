@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useSelector, useDispatch } from 'react-redux'
-import { 
-  fetchRepos 
-} from './githubSlice'
+import { unwrapResult } from '@reduxjs/toolkit'
 
-let RepoList = ({ repo }) => {
+import { 
+  fetchRepos,
+  selectAll,
+  selectAllRepos,
+  selectRepoById,
+  selectRepoIds,
+} from './repoSlice'
+
+let RepoList = ({ repoId }) => {
+  const repo = useSelector(state => selectRepoById(state, repoId))
   return (
     <div>
       <div>
         {repo.name}
       </div>
       <div>
-        {repo.full_name}
+        {repo.full_name} 
       </div>
     </div>
   )
@@ -20,14 +27,19 @@ let RepoList = ({ repo }) => {
 
 function GitHub() {
   const dispatch = useDispatch()
-  const repoStatus = useSelector(state => state.github.repoStatus)
-  const repos = useSelector(state => state.github.repos)
-  const error = useSelector(state => state.github.error)
+  const repoStatus = useSelector(state => state.repos.repoStatus)
+  const error = useSelector(state => state.repos.error)
+  const reposId = useSelector(selectRepoIds)
 
   useEffect(() => {
-    if (repoStatus === 'idle') {
-      dispatch(fetchRepos())
+    async function initalize() {
+      if (repoStatus === 'idle') {
+        const result = await dispatch(fetchRepos())
+        console.log(unwrapResult(result))
+      }
     }
+    initalize()
+
   })
 
   let content
@@ -35,7 +47,7 @@ function GitHub() {
     content = <div className='repo'> loading </div>
   } 
   else if (repoStatus === 'succeeded') {
-    content = repos.map(repo => <RepoList key={repo.id} repo={repo}></RepoList>)
+    content = reposId.map(repoId => <RepoList key={repoId} repoId={repoId}></RepoList>)
   }
   else if (repoStatus === 'failed') {
     content = <div className='repo'> {error} </div>
