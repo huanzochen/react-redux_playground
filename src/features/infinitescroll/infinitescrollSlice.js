@@ -34,12 +34,10 @@ export const infinitescrollSlice = createSlice({
     [getFakeData.fulfilled]: (state, action) => {
       state.status = 'succeeded'
       state.isLoading = false
-      console.log(action.payload)
       fakeDataAdapter.upsertMany(state, action.payload)
     },
     [getFakeData.rejected]: (state, action) => {
       state.status = 'failed'
-      console.log(action)
       console.log(action.error.message)
     }
   }
