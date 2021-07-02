@@ -16,7 +16,7 @@ function App() {
         <header className="App-header">
           <Home></Home>
           <Switch>
-            <Route path="/ifinitescroll">
+            <Route path="/infinitescroll">
               <InfiniteScroll/>
             </Route>
             <Route path="/github" exact component={GitHub} ></Route>

@@ -1,7 +1,8 @@
 import { BrowserRouter as Switch, Route, useRouteMatch, Link } from 'react-router-dom'
 import React, { useState, useEffect, useRef } from 'react'
 import { nanoid } from '@reduxjs/toolkit'
-import InfiniteScrollOrigin from './Origin'
+import Origin from './Origin'
+import Reduxx from './Reduxx'
 
 
 /**
@@ -14,19 +15,19 @@ import InfiniteScrollOrigin from './Origin'
  */
 
 function InfiniteScroll() {
-  let match = useRouteMatch()
-  console.log(match)
+  let { path, url } = useRouteMatch()
 
   return (
     <div>
-      <Link to={`${match.url}/origin`}>Origin</Link>
-      <a href="/ifinitescroll/origin"> A</a>
-
+      <a href={`${url}/origin`}> origin </a>
+      <a href={`${url}/reduxx`}> Reduxx </a>
       <Switch>
-        <Route path={`${match.path}/origin`}>
-          <InfiniteScrollOrigin></InfiniteScrollOrigin>
+        <Route exact path={`${path}/origin`}>
+          <Origin></Origin>
         </Route>
-
+        <Route exact path={`${path}/reduxx`}>
+          <Reduxx></Reduxx>
+        </Route>
       </Switch>
     </div>
   )

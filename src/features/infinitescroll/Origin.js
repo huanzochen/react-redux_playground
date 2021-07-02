@@ -39,6 +39,7 @@ function Origin() {
     window.addEventListener('scroll', function(e) {
       console.log(isBottom(refDiv))
     })
+    return () => document.removeEventListener('scroll', onScroll)
   })
 
 

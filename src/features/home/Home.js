@@ -11,7 +11,7 @@ function Home () {
   return (
     <StyledHome>
       <a href="/">Home</a>
-      <a href="/ifinitescroll">InfiniteScroll</a>
+      <a href="/infinitescroll">InfiniteScroll</a>
       <a href="/github">GitHub</a>
       <a href="/counter">Counter</a>
       <a href="/mycounter">MyCounter</a>
