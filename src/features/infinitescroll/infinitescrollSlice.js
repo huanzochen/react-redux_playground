@@ -1,13 +1,11 @@
-import { createSlice, createEntityAdapter, createAsyncThunk } from '@reduxjs/toolkit'
+import { createSlice, createEntityAdapter, createAsyncThunk, createSelector } from '@reduxjs/toolkit'
 import { mycounterSlice } from '../mycounter/mycounterSlice'
 
 const fakeDataAdapter = createEntityAdapter()
 
 const initialState = fakeDataAdapter.getInitialState({
-  isLoading: false,
-  hasMoreData: false,
   status: 'idle',
-  page:1
+  pagination: 1
 })
 
 export const getFakeData = createAsyncThunk('infinitescroll/get', async() => {
@@ -25,15 +23,19 @@ export const getFakeData = createAsyncThunk('infinitescroll/get', async() => {
 export const infinitescrollSlice = createSlice({
   name: 'infinitescroll',
   initialState,
-  reducers: {},
+  reducers: {
+    nextPage: {
+      reducer(state, action) {
+        state.pagination++
+      }
+    }
+  },
   extraReducers: {
     [getFakeData.pending]: (state, action) => {
       state.status = 'loading'
-      state.isLoading = true
     },
     [getFakeData.fulfilled]: (state, action) => {
       state.status = 'succeeded'
-      state.isLoading = false
       fakeDataAdapter.upsertMany(state, action.payload)
     },
     [getFakeData.rejected]: (state, action) => {
@@ -43,7 +45,7 @@ export const infinitescrollSlice = createSlice({
   }
 })
 
-export const { } = infinitescrollSlice.actions
+export const { nextPage, moreData, noData } = infinitescrollSlice.actions
 
 export default infinitescrollSlice.reducer
 
@@ -51,3 +53,11 @@ export const {
   selectIds: selectDataIds,
   selectById: selectDataById
 } = fakeDataAdapter.getSelectors(state => state.infinitescrolls)
+
+export const selectDataIdsPart = createSelector(
+  selectDataIds, 
+  (state, pagination) => pagination,
+  (dataIds, pagination) => {
+    return dataIds.slice(0, pagination * 10)
+  }
+)
