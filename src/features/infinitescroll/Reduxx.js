@@ -42,7 +42,6 @@ function Reduxx() {
   
 
   useEffect(() => {
-    console.log(dataIds.length, dataIdsPart.length)
     if (dataIds.length > dataIdsPart.length) {
       setHasMoreData(true)
     }
