@@ -36,7 +36,7 @@ function Origin() {
 
   useEffect(() => {
     // Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
-    window.addEventListener('scroll', function(e) {
+    document.addEventListener('scroll', function(e) {
       console.log(isBottom(refDiv))
     })
     return () => document.removeEventListener('scroll', onScroll)

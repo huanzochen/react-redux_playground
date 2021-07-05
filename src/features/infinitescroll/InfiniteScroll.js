@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import { nanoid } from '@reduxjs/toolkit'
 import Origin from './Origin'
 import Reduxx from './Reduxx'
+import ScrollNpm from './ScrollNpm'
+import ReactInfiniteSrollDemo from './ReactInfiniteSrollDemo'
 
 
 /**
@@ -21,12 +23,20 @@ function InfiniteScroll() {
     <div>
       <a href={`${url}/origin`}> origin </a>
       <a href={`${url}/reduxx`}> Reduxx </a>
+      <a href={`${url}/infinite-scroll-npm`}> infinite-scroll-npm </a>
+      <a href={`${url}/infinite-scroll-ref`}> infinite-scroll-ref </a>
       <Switch>
         <Route exact path={`${path}/origin`}>
           <Origin></Origin>
         </Route>
         <Route exact path={`${path}/reduxx`}>
           <Reduxx></Reduxx>
+        </Route>
+        <Route exact path={`${path}/infinite-scroll-npm`}>
+          <ScrollNpm></ScrollNpm>
+        </Route>
+        <Route exact path={`${path}/infinite-scroll-ref`}>
+          <ReactInfiniteSrollDemo></ReactInfiniteSrollDemo>
         </Route>
       </Switch>
     </div>
