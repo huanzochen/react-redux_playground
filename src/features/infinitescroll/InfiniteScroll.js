@@ -1,10 +1,9 @@
 import { BrowserRouter as Switch, Route, useRouteMatch, Link } from 'react-router-dom'
 import React, { useState, useEffect, useRef } from 'react'
 import { nanoid } from '@reduxjs/toolkit'
-import Origin from './Origin'
-import Reduxx from './Reduxx'
-import ScrollNpm from './ScrollNpm'
-import ReactInfiniteSrollDemo from './ReactInfiniteSrollDemo'
+import ScrollEvent from './ScrollEvent'
+import HandMadeInfiniteScroll from './HandMadeInfiniteScroll'
+import InfiniteScrollNpm from './InfiniteScrollNpm'
 
 
 /**
@@ -21,22 +20,18 @@ function InfiniteScroll() {
 
   return (
     <div>
-      <a href={`${url}/origin`}> origin </a>
-      <a href={`${url}/reduxx`}> Reduxx </a>
-      <a href={`${url}/infinite-scroll-npm`}> infinite-scroll-npm </a>
-      <a href={`${url}/infinite-scroll-ref`}> infinite-scroll-ref </a>
+      <a href={`${url}/origin`}> ScrollEvent </a>
+      <a href={`${url}/handmade`}> HandMadeInfiniteScroll </a>
+      <a href={`${url}/infinite-scroll-npm`}> InfiniteScrollNpm</a>
       <Switch>
         <Route exact path={`${path}/origin`}>
-          <Origin></Origin>
+          <ScrollEvent></ScrollEvent>
         </Route>
-        <Route exact path={`${path}/reduxx`}>
-          <Reduxx></Reduxx>
+        <Route exact path={`${path}/handmade`}>
+          <HandMadeInfiniteScroll></HandMadeInfiniteScroll>
         </Route>
         <Route exact path={`${path}/infinite-scroll-npm`}>
-          <ScrollNpm></ScrollNpm>
-        </Route>
-        <Route exact path={`${path}/infinite-scroll-ref`}>
-          <ReactInfiniteSrollDemo></ReactInfiniteSrollDemo>
+          <InfiniteScrollNpm></InfiniteScrollNpm>
         </Route>
       </Switch>
     </div>

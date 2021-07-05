@@ -30,7 +30,7 @@ let Repo = ({ dataId }) => {
   )
 }
 
-function Reduxx() {
+function HandMadeInfiniteScroll() {
   const refDiv = React.useRef()
   const dispatch = useDispatch()
   const fakeDataStatus = useSelector(state => state.infinitescrolls.status)
@@ -96,7 +96,7 @@ function Reduxx() {
   )
 }
 
-export default Reduxx
+export default HandMadeInfiniteScroll
 
 /**
  * https://developer.mozilla.org/zh-TW/docs/Web/API/Document/scroll_event

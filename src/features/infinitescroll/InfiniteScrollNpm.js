@@ -19,7 +19,7 @@ import {
  */
 
 
-function ScrollNpm() {
+function InfiniteScrollNpm() {
   const dispatch = useDispatch()
   const [hasMoreData, setHasMoreData] = useState(false)
   const fakeDataStatus = useSelector(state => state.infinitescrolls.status)
@@ -79,4 +79,4 @@ function ScrollNpm() {
   )
 }
 
-export default ScrollNpm
+export default InfiniteScrollNpm

@@ -10,7 +10,7 @@ import { nanoid } from '@reduxjs/toolkit'
  * 利用在 div (原生地 DOM) 宣告 ref 來抓取元素的個別數值, 取得他的 bottom 來實作偵測元素底部實現 無限捲動載入的功能.
  */
 
-function Origin() {
+function ScrollEvent() {
   const [fakeData, setFakeData] = useState(['sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa',
     'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa',
     'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa', 'sadassa',
@@ -55,7 +55,7 @@ function Origin() {
   )
 }
 
-export default Origin
+export default ScrollEvent
 
 /**
  * https://developer.mozilla.org/zh-TW/docs/Web/API/Document/scroll_event
