@@ -13,8 +13,8 @@ function InfiniteScroll({
   let [isLoading, setIsLoading] = useState(false)
   let [checkDataLenth, setCheckDataLenth] = useState(dataLength)
 
-  // 被綁定 ref 的該原生 DOM 是否已經觸底.
-  function isBottom(ref) { 
+
+  const isBottom = (ref) => { 
     if (!ref.current) {
       return false
     }
@@ -22,6 +22,7 @@ function InfiniteScroll({
   }
 
   useEffect(() => {
+    // 被綁定 ref 的該原生 DOM 是否已經觸底.
     const onScroll = () => {
       if (hasMore && isBottom(refDiv)) {
         console.log('正在仔入內容...')
@@ -31,21 +32,22 @@ function InfiniteScroll({
     }
     document.addEventListener('scroll', onScroll)
     return () => document.removeEventListener('scroll', onScroll)
-  })
+  }, [next, checkDataLenth, dataLength, hasMore])
 
   useEffect(() => {
     if (checkDataLenth !== dataLength) {
-      console.log('資料長度變了')
-      setCheckDataLenth(dataLength)
+      console.log('載入更多資料中...')
       setIsLoading(false)
+      setCheckDataLenth(dataLength)
     }
   }, [checkDataLenth, dataLength])
 
 
 
   return (
-    <div ref={refDiv} style={{ overflowAnchor: 'none' }}>
+    <div ref={refDiv}>
       {children}
+      {isLoading ? loader : ''}
     </div>
   )
 

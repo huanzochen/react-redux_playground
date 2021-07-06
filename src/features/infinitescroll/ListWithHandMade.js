@@ -39,13 +39,7 @@ function HandMadeInfiniteScroll() {
   const pagination = useSelector(state => state.infinitescrolls.pagination)
   const dataIdsPart = useSelector((state) => selectDataIdsPart(state, pagination))
 
-  const fetchMoreData = async () => {
-    const promise = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve()
-      }, 2000)
-    })
-    await promise
+  const fetchMoreData = () => {
     dispatch(nextPage())
   }
 
