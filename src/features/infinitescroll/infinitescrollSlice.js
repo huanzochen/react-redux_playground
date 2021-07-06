@@ -58,6 +58,6 @@ export const selectDataIdsPart = createSelector(
   selectDataIds, 
   (state, pagination) => pagination,
   (dataIds, pagination) => {
-    return dataIds.slice(0, pagination * 10)
+    return dataIds.slice(0, pagination * 8)
   }
 )

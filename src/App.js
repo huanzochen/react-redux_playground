@@ -4,7 +4,7 @@ import Home from './features/home/Home'
 import CounterHomepage from './features/counter/CounterHomepage'
 import MyCounter from './features/mycounter/MyCounter'
 import GitHub from './features/github/GitHub'
-import InfiniteScroll from './features/infinitescroll/InfiniteScroll'
+import InfiniteScroll from './features/infinitescroll/Main'
 import './App.css'
 
 
