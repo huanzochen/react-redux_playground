@@ -4,6 +4,7 @@ import Home from './features/home/Home'
 import CounterHomepage from './features/counter/CounterHomepage'
 import MyCounter from './features/mycounter/MyCounter'
 import GitHub from './features/github/GitHub'
+import EventTargetValue from './features/eventtargetvalue/EventTargetValue'
 import InfiniteScroll from './features/infinitescroll/Main'
 import './App.css'
 
@@ -20,6 +21,7 @@ function App() {
               <InfiniteScroll/>
             </Route>
             <Route path="/github" exact component={GitHub} ></Route>
+            <Route path="/eventtargetvalue" exact component={EventTargetValue} ></Route>
             <Route path="/counter" exact component={CounterHomepage} ></Route>
             <Route path="/mycounter" exact component={MyCounter} ></Route>
           </Switch>

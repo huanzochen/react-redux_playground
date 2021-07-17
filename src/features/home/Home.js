@@ -13,6 +13,7 @@ function Home () {
       <a href="/">Home</a>
       <a href="/infinitescroll">InfiniteScroll</a>
       <a href="/github">GitHub</a>
+      <a href="/eventtargetvalue">EventTargetValue</a>
       <a href="/counter">Counter</a>
       <a href="/mycounter">MyCounter</a>
     </StyledHome>
