@@ -39,7 +39,6 @@ function GitHub() {
       }
     }
     initalize()
-
   })
 
   let content
