@@ -6,6 +6,7 @@ import MyCounter from './features/mycounter/MyCounter'
 import GitHub from './features/github/GitHub'
 import EventTargetValue from './features/eventtargetvalue/EventTargetValue'
 import InfiniteScroll from './features/infinitescroll/Main'
+import MouseEvents from './features/mouseEvents/MouseEvents'
 import './App.css'
 
 
@@ -17,6 +18,7 @@ function App() {
         <header className="App-header">
           <Home></Home>
           <Switch>
+            <Route path="/mouseevents" exact component={MouseEvents}></Route>
             <Route path="/infinitescroll">
               <InfiniteScroll/>
             </Route>
