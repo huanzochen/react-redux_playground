@@ -7,6 +7,7 @@ import GitHub from './features/github/GitHub'
 import EventTargetValue from './features/eventtargetvalue/EventTargetValue'
 import InfiniteScroll from './features/infinitescroll/Main'
 import MouseEvents from './features/mouseEvents/MouseEvents'
+import Cookie from './features/cookie/Cookie'
 import './App.css'
 
 
@@ -18,6 +19,7 @@ function App() {
         <header className="App-header">
           <Home></Home>
           <Switch>
+            <Route path="/cookie" exact component={Cookie}></Route>
             <Route path="/mouseevents" exact component={MouseEvents}></Route>
             <Route path="/infinitescroll">
               <InfiniteScroll/>

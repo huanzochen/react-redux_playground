@@ -15,6 +15,7 @@ function Home () {
   return (
     <StyledHome>
       <a href="/">Home</a>
+      <a href="/cookie">Cookie</a>
       <a href="/mouseevents">MouseEvents</a>
       <a href="/infinitescroll">InfiniteScroll</a>
       <a href="/github">GitHub</a>
