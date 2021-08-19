@@ -1,0 +1,17 @@
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    & > div {
+        padding: 10px;
+        background-color: #E7DAD8;
+    }
+
+}
+
+.col {
+    flex-grow: 1;
+    
+    border: 1px solid grey;
+}

@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "date-fns": "^2.23.0",
+    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-cookie": "^4.1.0",
     "react-dom": "^17.0.2",
@@ -24,7 +25,8 @@
     "eject": "react-scripts eject",
     "eslint:all": "eslint --ext .js --fix ./",
     "lint:js": "stylelint ./src/**/*.js",
-    "lint:all": "stylelint ./src/**/*.js --fix"
+    "lint:all": "stylelint ./src/**/*.js --fix",
+    "scss": "node-sass --watch ./public/scss -o ./public/css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,3 +50,5 @@
     "stylelint-config-styled-components": "^0.1.1"
   }
 }
+
+
