@@ -15,14 +15,14 @@ padding: 10px;
 `
 
 const CookiesBar = styled.div`
-display:flex;
+display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
 `
 
 const SessionStorageBar = styled.div`
-display:flex;
+display: flex;
 flex-direction: center;
 align-items: center;
 justify-content: space-around;

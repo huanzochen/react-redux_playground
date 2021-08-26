@@ -14,7 +14,7 @@ font-size: 60px;
 `
 
 const MouseOver = styled.div`
-padding:10px;
+padding: 10px;
 background-color: darkpink;
 display: flex;
 flex-direction: row;
