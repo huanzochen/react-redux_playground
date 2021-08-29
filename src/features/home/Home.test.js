@@ -2,7 +2,7 @@ import Home from './Home'
 import Enzyme, { shallow, mount } from 'enzyme'
 
 
-describe('<Home />', () => {
+describe('Home', () => {
     
   test('renders styledHome and check <a> 數量', () => {
     const renderedComponent = shallow(<Home/>)
@@ -25,3 +25,12 @@ describe('<Home />', () => {
 
 })
 
+
+describe('StyledHome', () => {
+  const renderedComponent = shallow(<Home />)
+
+  expect(renderedComponent.getElement()).toHaveStyle(`
+    display: flex;
+  `)
+
+})
