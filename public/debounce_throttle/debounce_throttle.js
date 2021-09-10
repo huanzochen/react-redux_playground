@@ -70,6 +70,7 @@ function handleNameBarChangeMix(event) {
     clickTimeMixElement.innerText = inputFiredTimesMix
 }
 
+// 似乎效果不好, 繼續看看
 function mixDebounceThrottle(func, delay) {
     let inThrottle = false
     let timeoutDebounce = null
@@ -80,14 +81,17 @@ function mixDebounceThrottle(func, delay) {
         let args = arguments
         clearTimeout(timeoutDebounce)
         if(!inThrottle){
+            func.apply(context, args)
             inThrottle = true
-            timeoutDebounce = setTimeout(function(){
-                func.apply(context, args)
-            }, delay)
             clearTimeout(timeoutThrottle)
             timeoutThrottle = setTimeout(function(){
                 inThrottle = false
-            })
+            }, delay)
+
+            timeoutDebounce = setTimeout(function(){
+                func.apply(context, args)
+            }, delay)
+
         }
     }
 }
