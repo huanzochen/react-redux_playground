@@ -5,11 +5,24 @@ const StyledHome = styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
+justify-content: center;
 
 & > a{
     padding-right: 10px
 }
 `
+
+const StaticPage = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+& > a{
+  margin: 0 5px 0 5px;
+}
+
+`
+
 
 function Home () {
   return (
@@ -22,6 +35,10 @@ function Home () {
       <a href="/eventtargetvalue">EventTargetValue</a>
       <a href="/counter">Counter</a>
       <a href="/mycounter">MyCounter</a>
+      <StaticPage>
+        <a href="/handmade_grid_system/gridsystem.html">gridsystem</a>
+        <a href="/debounce_throttle/debounce_throttle.html">debounce&throttle</a>
+      </StaticPage>
     </StyledHome>
   )
 }
