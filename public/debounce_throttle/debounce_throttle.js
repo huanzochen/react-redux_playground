@@ -1,8 +1,6 @@
 const nameBarDebounceElement = document.querySelector('#name-debounce')
 const clickTimesDebounceElement = document.querySelector('#click-times-debounce')
-
 let inputFiredTimesDebounce = 0
-let inputFiredTimesThrottle = 0
 
 function handleNameBarChangeDebounce(event) {
     console.log(`debounce! ${inputFiredTimesDebounce}`)
@@ -31,6 +29,7 @@ nameBarDebounceElement.addEventListener('keyup', debounce(handleNameBarChangeDeb
 
 const nameBarThrottleElement = document.querySelector('#name-throttle')
 const clickTimesThrottleElement = document.querySelector('#click-times-throttle')
+let inputFiredTimesThrottle = 0
 
 function handleNameBarChangeThrottle(event) {
     console.log(`throttle! ${inputFiredTimesThrottle} `)
@@ -48,7 +47,6 @@ function throttle(func, delay){
         let args = arguments
         
         if(!inThrottle){
-            console.log('進到 throttle!')
             func.apply(context, args)
             inThrottle = true
             clearTimeout(timeout)
@@ -62,7 +60,39 @@ function throttle(func, delay){
 nameBarThrottleElement.addEventListener('keyup', throttle(handleNameBarChangeThrottle, 1000))
 
 
+const nameBarMixElement = document.querySelector('#name-mix')
+const clickTimeMixElement = document.querySelector('#click-times-mix')
+let inputFiredTimesMix = 0
 
+function handleNameBarChangeMix(event) {
+    console.log(`mix! ${inputFiredTimesMix}`)
+    inputFiredTimesMix++
+    clickTimeMixElement.innerText = inputFiredTimesMix
+}
+
+function mixDebounceThrottle(func, delay) {
+    let inThrottle = false
+    let timeoutDebounce = null
+    let timeoutThrottle = null
+
+    return function() {
+        let context = this
+        let args = arguments
+        clearTimeout(timeoutDebounce)
+        if(!inThrottle){
+            inThrottle = true
+            timeoutDebounce = setTimeout(function(){
+                func.apply(context, args)
+            }, delay)
+            clearTimeout(timeoutThrottle)
+            timeoutThrottle = setTimeout(function(){
+                inThrottle = false
+            })
+        }
+    }
+}
+
+nameBarMixElement.addEventListener('keyup', mixDebounceThrottle(handleNameBarChangeMix, 1000))
 
 // function testThis(func) {
 //     console.log(this)
