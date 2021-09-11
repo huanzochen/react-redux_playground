@@ -39,6 +39,12 @@ function Home () {
         <a href="/handmade_grid_system/gridsystem.html">gridsystem</a>
         <a href="/debounce_throttle/debounce_throttle.html">debounce&throttle</a>
       </StaticPage>
+      <StaticPage>
+        <a href="/position/position-relative.html">relative</a>
+        <a href="/position/position-absolute.html">absolute</a>
+        <a href="/position/position-fixed.html">fixed</a>
+        <a href="/position/position-sticky.html">sticky</a>
+      </StaticPage>
     </StyledHome>
   )
 }

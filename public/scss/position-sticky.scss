@@ -1,0 +1,31 @@
+.box-ancestor {
+    width: 95%;
+    position: absolute;
+    top: 300px;
+    left: 10px;
+    background: beige;
+    height: 300px;
+    overflow: scroll;
+}
+
+.bar {
+    display: inline-block;
+    text-align: center;
+    color: green;
+    height: 50px;
+    width: 95%;
+}
+
+.box {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: darkgoldenrod;
+    color: white;
+}
+
+#two {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
