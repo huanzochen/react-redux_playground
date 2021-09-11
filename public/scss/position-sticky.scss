@@ -4,7 +4,7 @@
     top: 300px;
     left: 10px;
     background: beige;
-    height: 300px;
+    height: 500px;
     overflow: scroll;
 }
 
@@ -13,7 +13,11 @@
     text-align: center;
     color: green;
     height: 50px;
-    width: 95%;
+    // width: 95%;
+    padding: 15% 30% 0 30%;
+    position: sticky;
+    top: 10px;
+    background: lightgray;
 }
 
 .box {
@@ -25,7 +29,7 @@
 }
 
 #two {
-    position: absolute;
+    position: sticky;
     top: 20px;
     left: 10px;
 }
