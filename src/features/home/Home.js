@@ -40,6 +40,7 @@ function Home () {
         <a href="/debounce_throttle/debounce_throttle.html">debounce&throttle</a>
       </StaticPage>
       <StaticPage>
+        <a href="/layout_containingblock/layout_containingblock.html"> layout_containingblock </a>
         <a href="/position/position-relative.html">relative</a>
         <a href="/position/position-absolute.html">absolute</a>
         <a href="/position/position-fixed.html">fixed</a>
