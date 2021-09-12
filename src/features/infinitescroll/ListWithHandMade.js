@@ -15,7 +15,7 @@ import {
  * 
  * @returns 
  * 
- * 這個範例演示了 infinite scroll 
+ * 這個範例演示了 infinite scroll, 使用自己寫的 Infinite scroll 元件來實現 infinite scroll
  * 參考至 https://typeofnan.dev/creating-a-react-infinite-scroll-component/
  * 利用在 div (原生地 DOM) 宣告 ref 來抓取元素的個別數值, 取得他的 bottom 來實作偵測元素底部實現 無限捲動載入的功能.
  */
