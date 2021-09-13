@@ -48,7 +48,7 @@ function InfiniteScroll({
     }
   }, [hasMore, next])
 
-  const throttleChangedHandler = useMemo(() => { return throttle(onScroll, 300) }
+  const throttleChangedHandler = useMemo(() => { return throttle(onScroll, 700) }
     , [onScroll])
 
 

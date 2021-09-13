@@ -16,6 +16,8 @@ justify-content: center;
 const DynamicPage = styled.div`
 display: flex;
 flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
 background: ${color.primary};
 border-radius: 10px;
 `
@@ -23,6 +25,7 @@ border-radius: 10px;
 const StaticPage = styled.div`
 display: flex;
 flex-direction: row;
+flex-wrap: wrap;
 justify-content: center;
 font-size: 20px;
 background: ${color.third};
@@ -56,6 +59,9 @@ function Home () {
         <a href="/position/position-absolute.html">absolute</a>
         <a href="/position/position-fixed.html">fixed</a>
         <a href="/position/position-sticky.html">sticky</a>
+      </StaticPage>
+      <StaticPage>
+        <a href="/lazy-loading/intersection-observer.html">intersection-observer</a>
       </StaticPage>
     </StyledHome>
   )
