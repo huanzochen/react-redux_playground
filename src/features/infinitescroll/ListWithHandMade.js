@@ -31,13 +31,13 @@ let Repo = ({ dataId }) => {
   )
 }
 
-function HandMadeInfiniteScroll() {
+function ListWithHandMade() {
   const dispatch = useDispatch()
-  const [hasMoreData, setHasMoreData] = useState(false)
+  const [hasMoreData, setHasMoreData] = useState(false) // 確認是否有更多資料
   const fakeDataStatus = useSelector(state => state.infinitescrolls.status)
-  const dataIds = useSelector(selectDataIds)
+  const dataIds = useSelector(selectDataIds) // picture 的總數量
   const pagination = useSelector(state => state.infinitescrolls.pagination)
-  const dataIdsPart = useSelector((state) => selectDataIdsPart(state, pagination))
+  const dataIdsPart = useSelector((state) => selectDataIdsPart(state, pagination)) // 當前獲取的 dataids
 
   const fetchMoreData = () => {
     dispatch(nextPage())
@@ -92,7 +92,7 @@ function HandMadeInfiniteScroll() {
   )
 }
 
-export default HandMadeInfiniteScroll
+export default ListWithHandMade
 
 /**
  * https://developer.mozilla.org/zh-TW/docs/Web/API/Document/scroll_event
