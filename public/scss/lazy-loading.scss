@@ -21,7 +21,7 @@ body{
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -52,7 +52,7 @@ img {
         -90deg,
         rgb(236, 236, 236) 0%,
         rgb(236, 236, 236) 40%,
-        rgb(232, 232, 232) 50%,
+        rgb(0, 117, 29) 50%,
         rgb(236, 236, 236) 60%,
         rgb(236, 236, 236) 100%
     );
@@ -62,7 +62,7 @@ img {
 }
 
 .loading {
-    animation: loading 1.5s ease infinite;
+    animation: 1.5s ease infinite loading;
 }
 
 .fade-out {

@@ -10,8 +10,6 @@ const removeMockup = (event) => {
     console.log('loaded')
     const mockup = event.target.previousElementSibling
     mockup.addEventListener('transitionend', mockup.remove)
-    // const mockup = event.target.previousElementSibling
-    // mockup.addEventListener('transitionend', mockup.remove)
     mockup.classList.remove('loading')
     mockup.classList.add('fade-out')
 }
