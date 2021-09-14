@@ -7,9 +7,11 @@ window.addEventListener('load', () => {
 
 
 const removeMockup = (event) => {
-    console.log('removeMockup')
+    console.log('loaded')
     const mockup = event.target.previousElementSibling
     mockup.addEventListener('transitionend', mockup.remove)
+    // const mockup = event.target.previousElementSibling
+    // mockup.addEventListener('transitionend', mockup.remove)
     mockup.classList.remove('loading')
     mockup.classList.add('fade-out')
 }
@@ -17,7 +19,7 @@ const removeMockup = (event) => {
 const loadImage = (img) =>{
     img.previousElementSibling.classList.add('loading')
     img.setAttribute('src', img.dataset.src)
-    img.removeAttribute('src')
+    img.removeAttribute('data-src')
     console.log('img.addEventListener')
     img.addEventListener('load', removeMockup)
 }

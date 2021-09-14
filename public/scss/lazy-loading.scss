@@ -1,3 +1,8 @@
+@keyframes loading {
+    from { background-position-x: 100%; }
+    to { background-position-x: 0%; }
+}
+
 html {
     box-sizing: border-box;
 }
@@ -53,7 +58,11 @@ img {
     );
     background-repeat: repeat;
     background-size: 400% 200%;
-    transition: opacity 2 ease-in; 
+    transition: opacity 600ms ease-in; 
+}
+
+.loading {
+    animation: loading 1.5s ease infinite;
 }
 
 .fade-out {
@@ -61,5 +70,5 @@ img {
 }
 
 .no-js {
-    display: none
+    display: none;
 }
