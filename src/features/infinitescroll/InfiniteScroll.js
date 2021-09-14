@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 
 function throttle(func, delay) {
   let timeout = null
@@ -23,9 +23,15 @@ function InfiniteScroll({
   loader,
   children
 }) {
-  const refDiv = React.useRef()
+  const refDiv = useRef()
   let [isLoading, setIsLoading] = useState(false)
   let [checkDataLenth, setCheckDataLenth] = useState(dataLength)
+
+  const renderCount = useRef(0) // { current: 0 }
+  useEffect(() => {
+    renderCount.current += 1
+    console.log(renderCount.current)
+  })
 
   const isBottom = (ref) => { 
     if (!ref.current) {

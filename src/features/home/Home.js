@@ -48,6 +48,7 @@ function Home () {
         <a href="/eventtargetvalue">EventTargetValue</a>
         <a href="/counter">Counter</a>
         <a href="/mycounter">MyCounter</a>
+        <a href="/lazyload">LazyLoad</a>
       </DynamicPage>
       <StaticPage>
         <a href="/handmade_grid_system/gridsystem.html">gridsystem</a>
