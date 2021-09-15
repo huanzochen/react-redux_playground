@@ -23,7 +23,7 @@ function getIntersectionObserver() {
     watcher = new IntersectionObserver(intersectionsCallback, {
       root: null,
       rootMargin: '0px',
-      threshold: [0.1]
+      thresholds: [0.1]
     })
   }
   return watcher
