@@ -1,17 +1,22 @@
 section {
   border: 1px solid blue;
   width: 100%;
-  float: left; }
+  float: left;
+}
 
 div {
   margin: 5px;
   width: 50px;
-  height: 150px; }
+  height: 150px;
+}
 
 .left {
   float: left;
-  background: pink; }
+  background: pink;
+}
 
 .right {
   float: right;
-  background: cyan; }
+  background: cyan;
+}
+/*# sourceMappingURL=float.css.map */

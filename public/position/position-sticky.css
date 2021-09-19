@@ -5,7 +5,8 @@
   left: 10px;
   background: beige;
   height: 500px;
-  overflow: scroll; }
+  overflow: scroll;
+}
 
 .bar {
   display: inline-block;
@@ -13,18 +14,24 @@
   color: green;
   height: 50px;
   padding: 15% 30% 0 30%;
+  position: -webkit-sticky;
   position: sticky;
   top: 10px;
-  background: lightgray; }
+  background: lightgray;
+}
 
 .box {
   display: inline-block;
   height: 200px;
   width: 200px;
   background-color: darkgoldenrod;
-  color: white; }
+  color: white;
+}
 
 #two {
+  position: -webkit-sticky;
   position: sticky;
   top: 20px;
-  left: 10px; }
+  left: 10px;
+}
+/*# sourceMappingURL=position-sticky.css.map */

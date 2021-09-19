@@ -1,5 +1,6 @@
 body {
-  background: beige; }
+  background: beige;
+}
 
 section {
   position: absolute;
@@ -9,7 +10,9 @@ section {
   height: 160px;
   padding: 30px 20px;
   background: lightgray;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 p {
   position: absolute;
@@ -21,4 +24,6 @@ p {
   /* == (400px + 20px + 20px) * .05 = 22px */
   padding: 5%;
   /* == (400px + 20px + 20px) * .05 = 22px */
-  background: cyan; }
+  background: cyan;
+}
+/*# sourceMappingURL=layout_containingblock2.css.map */

@@ -2,19 +2,23 @@
   width: 75%;
   position: absolute;
   top: 200px;
-  left: 10px;
+  left: 150px;
   background: beige;
   height: 300px;
-  overflow: scroll; }
+  overflow: scroll;
+}
 
 .box {
   display: inline-block;
   height: 200px;
   width: 200px;
   background-color: darkgoldenrod;
-  color: white; }
+  color: white;
+}
 
 #two {
-  position: fixed;
+  position: absolute;
   top: 20px;
-  left: 100px; }
+  left: 10px;
+}
+/*# sourceMappingURL=position-absolute.css.map */

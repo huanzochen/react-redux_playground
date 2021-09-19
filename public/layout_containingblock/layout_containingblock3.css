@@ -1,11 +1,14 @@
 body {
-  background: beige; }
+  background: beige;
+}
 
 section {
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   width: 400px;
   height: 160px;
-  background: lightgray; }
+  background: lightgray;
+}
 
 p {
   position: absolute;
@@ -19,4 +22,6 @@ p {
   /* == 20px */
   padding: 5%;
   /* == 20px */
-  background: cyan; }
+  background: cyan;
+}
+/*# sourceMappingURL=layout_containingblock3.css.map */
