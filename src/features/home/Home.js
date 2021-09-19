@@ -63,6 +63,7 @@ function Home () {
       </StaticPage>
       <StaticPage>
         <a href="/lazy-loading/intersection-observer.html">intersection-observer</a>
+        <a href="/lazy-loading/intersection-observer2.html">intersection-observer2</a>
       </StaticPage>
     </StyledHome>
   )
