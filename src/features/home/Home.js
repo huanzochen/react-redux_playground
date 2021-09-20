@@ -65,6 +65,9 @@ function Home() {
         <a href="/lazy-loading/intersection-observer.html">intersection-observer</a>
         <a href="/lazy-loading/intersection-observer2.html">intersection-observer2</a>
       </StaticPage>
+      <StaticPage>
+        <a href="/landing_page_50+54/">landing_page</a>
+      </StaticPage>
     </StyledHome>
   )
 }
