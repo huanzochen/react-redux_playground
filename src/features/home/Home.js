@@ -36,7 +36,7 @@ background: ${color.third};
 `
 
 
-function Home () {
+function Home() {
   return (
     <StyledHome>
       <DynamicPage>
