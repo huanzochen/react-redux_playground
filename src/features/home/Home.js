@@ -68,6 +68,9 @@ function Home() {
       <StaticPage>
         <a href="/landing_page_50+54/">landing_page</a>
       </StaticPage>
+      <StaticPage>
+        <a href="/div3wayscenter/div3wayscenter1.html">div3wayscenter1</a>
+      </StaticPage>
     </StyledHome>
   )
 }
