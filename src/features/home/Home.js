@@ -70,6 +70,9 @@ function Home() {
       </StaticPage>
       <StaticPage>
         <a href="/div3wayscenter/div3wayscenter1.html">div3wayscenter1</a>
+        <a href="/div3wayscenter/div3wayscenter2.html">div3wayscenter2</a>
+        <a href="/div3wayscenter/div3wayscenter3.html">div3wayscenter3</a>
+        <a href="/div3wayscenter/div3wayscenter4.html">div3wayscenter4</a>
       </StaticPage>
     </StyledHome>
   )
