@@ -1,0 +1,34 @@
+.flexbox {
+    display: flex;
+
+    padding: 10px;
+    background: rgb(224, 222, 222);
+
+    & > div{
+        padding: 10px;
+
+        background: rgb(214, 175, 181);
+        
+        &:nth-child(1){
+            flex: 0 0 100px;
+            background-color: rgb(192, 106, 192);
+        }
+        &:nth-child(2){
+            flex: 1;
+            max-width: 500px;
+            background-color: rgb(100, 185, 219);
+        }
+        &:nth-child(3){
+            flex: 0 0 50px;
+            margin-left: auto;
+            background-color: rgb(10, 167, 10);
+        }
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr auto minmax(100px, 1fr) 1fr;
+    grid-template-rows: 100px repeat(3, auto) 100px;
+    grid-gap: 10px;
+}
