@@ -10,7 +10,7 @@ import MouseEvents from './features/mouseEvents/MouseEvents'
 import Cookie from './features/cookie/Cookie'
 import LazyLoad from './features/lazyLoad/LazyLoad'
 import Hoc from './features/hoc/Hoc'
-import Context from './features/context/Context'
+import Context from './features/context/ContextExample'
 
 import './App.css'
 

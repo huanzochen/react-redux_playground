@@ -50,6 +50,7 @@ function Home() {
         <a href="/mycounter">MyCounter</a>
         <a href="/lazyload">LazyLoad</a>
         <a href="/hoc">Hoc</a>
+        <a href="/context">Context</a>
       </DynamicPage>
       <StaticPage>
         <a href="/handmade_grid_system/gridsystem.html">gridsystem</a>
