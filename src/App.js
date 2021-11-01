@@ -8,8 +8,9 @@ import EventTargetValue from './features/eventtargetvalue/EventTargetValue'
 import InfiniteScroll from './features/infinitescroll/Main'
 import MouseEvents from './features/mouseEvents/MouseEvents'
 import Cookie from './features/cookie/Cookie'
-import LazyLoad from './features/LazyLoad/LazyLoad'
-import Hoc from './features/Hoc/Hoc'
+import LazyLoad from './features/lazyLoad/LazyLoad'
+import Hoc from './features/hoc/Hoc'
+import Context from './features/context/Context'
 
 import './App.css'
 
@@ -43,6 +44,7 @@ function App() {
           {/* <Wrapper> */}
           <Route path="/lazyload" exact component={LazyLoad}></Route>
           <Route path="/hoc" exact component={Hoc}></Route>
+          <Route path="/context" exact component={Context}></Route>
           {/* </Wrapper> */}
         </Switch>
 
