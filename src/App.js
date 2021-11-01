@@ -9,6 +9,7 @@ import InfiniteScroll from './features/infinitescroll/Main'
 import MouseEvents from './features/mouseEvents/MouseEvents'
 import Cookie from './features/cookie/Cookie'
 import LazyLoad from './features/LazyLoad/LazyLoad'
+import Hoc from './features/Hoc/Hoc'
 
 import './App.css'
 
@@ -39,9 +40,10 @@ function App() {
           <Route path="/eventtargetvalue" exact component={EventTargetValue} ></Route>
           <Route path="/counter" exact component={CounterHomepage} ></Route>
           <Route path="/mycounter" exact component={MyCounter} ></Route>
-          <Wrapper>
-            <Route path="/lazyload" exact component={LazyLoad}></Route>
-          </Wrapper>
+          {/* <Wrapper> */}
+          <Route path="/lazyload" exact component={LazyLoad}></Route>
+          <Route path="/hoc" exact component={Hoc}></Route>
+          {/* </Wrapper> */}
         </Switch>
 
       </div>
