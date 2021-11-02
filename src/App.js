@@ -11,6 +11,8 @@ import Cookie from './features/cookie/Cookie'
 import LazyLoad from './features/lazyLoad/LazyLoad'
 import Hoc from './features/hoc/Hoc'
 import Context from './features/context/ContextExample'
+import ContextHK from './features/contextHK/ContextHK'
+import MultiContext from './features/multiContext/MultiContext'
 
 import './App.css'
 
@@ -45,6 +47,8 @@ function App() {
           <Route path="/lazyload" exact component={LazyLoad}></Route>
           <Route path="/hoc" exact component={Hoc}></Route>
           <Route path="/context" exact component={Context}></Route>
+          <Route path="/contexthk" exact component={ContextHK}></Route>
+          <Route path="/multicontext" exact component={MultiContext}></Route>
           {/* </Wrapper> */}
         </Switch>
 

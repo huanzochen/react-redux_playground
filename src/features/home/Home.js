@@ -51,6 +51,8 @@ function Home() {
         <a href="/lazyload">LazyLoad</a>
         <a href="/hoc">Hoc</a>
         <a href="/context">Context</a>
+        <a href="/contexthk">ContextWithHook</a>
+        <a href="/multicontext">MultiContext</a>
       </DynamicPage>
       <StaticPage>
         <a href="/handmade_grid_system/gridsystem.html">gridsystem</a>
