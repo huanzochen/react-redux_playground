@@ -4,7 +4,7 @@ import { UserContext } from './UserContext'
 
 const Baby = () => {
 
-  const { user, setUser } = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext) // 修改取用方式，取用一個 useState套組.
   const moneyData = useContext(MoneyContext)
   
   console.log('userData in Baby Component = ', user)
