@@ -3,6 +3,14 @@ import { MoneyContext } from './MoneyContext'
 import { UserContext } from './UserContext'
 import { CompanyContext } from './CompanyContext'
 
+import styled from 'styled-components'
+import { color } from '../../utils/color'
+
+const StyledChild = styled.div`
+padding: 10px;
+background-color: ${color.lightblue};
+`
+
 const Child = (props) => {
   const { children } = props
 
@@ -15,10 +23,11 @@ const Child = (props) => {
   console.log('companyDaya in Child component = ', companyData)
 
   return (
-    <div>
-        the userData in Child component is {userData.user}
+    <StyledChild>
+        the userData in Child component is {userData.user} <br/>
+        the companyData in Child component is {companyData.company}
       {children}
-    </div>
+    </StyledChild>
   )
 }
 
