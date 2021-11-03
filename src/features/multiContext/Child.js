@@ -13,6 +13,7 @@ const Child = (props) => {
 
   return (
     <div>
+        the userData in Child component is {userData.user}
       {children}
     </div>
   )
