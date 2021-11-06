@@ -1,45 +1,14 @@
-import styled from 'styled-components'
-import { color } from '../../utils/color'
-
-
-const StyledHome = styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-
-& > a{
-    padding-right: 10px
-}
-`
-
-const DynamicPage = styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-background: ${color.primary};
-border-radius: 10px;
-`
-
-const StaticPage = styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-font-size: 20px;
-background: ${color.third};
-
-& > a{
-  margin: 0 5px 0 5px;
-}
-`
-
+import {
+  StyledHome,
+  DynamicPage,
+  StaticPage
+} from './StyleHome'
 
 function Home() {
   return (
     <StyledHome>
       <DynamicPage>
+        <div>Dynamic Page</div>
         <a href="/">Home</a>
         <a href="/cookie">Cookie</a>
         <a href="/mouseevents">MouseEvents</a>
@@ -55,24 +24,17 @@ function Home() {
         <a href="/multicontext">MultiContext</a>
       </DynamicPage>
       <StaticPage>
+        <div>Static Page</div>
         <a href="/handmade_grid_system/gridsystem.html">gridsystem</a>
         <a href="/debounce_throttle/debounce_throttle.html">debounce&throttle</a>
-      </StaticPage>
-      <StaticPage>
         <a href="/layout_containingblock/layout_containingblock.html"> layout_containingblock </a>
         <a href="/position/position-relative.html">relative</a>
         <a href="/position/position-absolute.html">absolute</a>
         <a href="/position/position-fixed.html">fixed</a>
         <a href="/position/position-sticky.html">sticky</a>
-      </StaticPage>
-      <StaticPage>
         <a href="/lazy-loading/intersection-observer.html">intersection-observer</a>
         <a href="/lazy-loading/intersection-observer2.html">intersection-observer2</a>
-      </StaticPage>
-      <StaticPage>
         <a href="/landing_page_50+54/">landing_page</a>
-      </StaticPage>
-      <StaticPage>
         <a href="/div3wayscenter/div3wayscenter1.html">div3wayscenter1</a>
         <a href="/div3wayscenter/div3wayscenter2.html">div3wayscenter2</a>
         <a href="/div3wayscenter/div3wayscenter3.html">div3wayscenter3</a>
