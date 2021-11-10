@@ -1,0 +1,83 @@
+@mixin make-col($size, $colums: $grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+  padding-left: $g-gutter-width / 2;
+  padding-right: $g-gutter-width / 2;
+}
+
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+.col {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col-1 {
+  @include make-col(1);
+}
+
+.col-2 {
+  @include make-col(2);
+}
+
+.col-3 {
+  @include make-col(3);
+}
+
+.col-4 {
+  @include make-col(4);
+}
+
+.col-5 {
+  @include make-col(5);
+}
+
+.col-6 {
+  @include make-col(6);
+}
+
+.col-7 {
+  @include make-col(7);
+}
+
+.col-8 {
+  @include make-col(8);
+}
+
+.col-9 {
+  @include make-col(9);
+}
+
+.col-10 {
+  @include make-col(10);
+}
+
+.col-11 {
+  @include make-col(11);
+}
+
+.col-12 {
+  @include make-col(12);
+}
+
+.no-gutters {
+  padding-right: 0;
+  padding-left: 0;
+}
+
