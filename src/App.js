@@ -8,11 +8,12 @@ import EventTargetValue from './features/eventtargetvalue/EventTargetValue'
 import InfiniteScroll from './features/infinitescroll/Main'
 import MouseEvents from './features/mouseEvents/MouseEvents'
 import Cookie from './features/cookie/Cookie'
-import LazyLoad from './features/lazyLoad_/LazyLoad'
-import Hoc from './features/hoc_/Hoc'
+import LazyLoad from './features/lazyLoad/LazyLoad'
+import Hoc from './features/hoc/Hoc'
 import Context from './features/context/ContextExample'
 import ContextHK from './features/contextHK/ContextHK'
 import MultiContext from './features/multiContext/MultiContext'
+import ReducerCounter from './features/reducerCounter'
 
 import './App.css'
 
@@ -49,6 +50,7 @@ function App() {
           <Route path="/context" exact component={Context}></Route>
           <Route path="/contexthk" exact component={ContextHK}></Route>
           <Route path="/multicontext" exact component={MultiContext}></Route>
+          <Route path="/reducercounter" exact component={ReducerCounter}></Route>
           {/* </Wrapper> */}
         </Switch>
 

@@ -22,6 +22,7 @@ function Home() {
         <a href="/context">Context</a>
         <a href="/contexthk">ContextWithHook</a>
         <a href="/multicontext">MultiContext</a>
+        <a href="/reducercounter">ReducerCounter</a>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>
