@@ -33,7 +33,10 @@
         "object-property-newline": ["error"],
         "object-curly-spacing": ["error", "always"],
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "warn",
+        // suppress errors for missing 'import React' in files
+        // make it compatible to 16.12.0
+        "react/react-in-jsx-scope": "off"
     },
     "plugins": [
         "react-hooks"
