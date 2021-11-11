@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   StyledHome,
   DynamicPage,
@@ -23,6 +24,7 @@ function Home() {
         <a href="/contexthk">ContextWithHook</a>
         <a href="/multicontext">MultiContext</a>
         <a href="/reducercounter">ReducerCounter</a>
+        <a href="/itempage">ItemPagePC</a>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>

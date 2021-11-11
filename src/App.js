@@ -15,6 +15,9 @@ import ContextHK from './features/contextHK/ContextHK'
 import MultiContext from './features/multiContext/MultiContext'
 import ReducerCounter from './features/reducerCounter'
 
+import ItemPagePC from './checkout/item/pc'
+import { initialData, location, serverSide } from './checkout/item/pc/mockData'
+
 import './App.css'
 
 import styled from 'styled-components'
@@ -51,6 +54,9 @@ function App() {
           <Route path="/contexthk" exact component={ContextHK}></Route>
           <Route path="/multicontext" exact component={MultiContext}></Route>
           <Route path="/reducercounter" exact component={ReducerCounter}></Route>
+          <Route path="/itempage">
+            <ItemPagePC initialData={initialData} location={location} serverSide={serverSide}/>
+          </Route>
           {/* </Wrapper> */}
         </Switch>
 
