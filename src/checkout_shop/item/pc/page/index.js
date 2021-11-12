@@ -1,5 +1,7 @@
 
-import { useItemCtx } from 'components/shop/item/shared/context'
+import { useItemCtx } from '../../shared/context'
+
+import MainPage from './mainPage'
 
 const ItemPage = () => {
   const {

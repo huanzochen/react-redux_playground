@@ -1,0 +1,34 @@
+.item-container {
+  background: $white;
+  color: $dark;
+  font-size: $font-size-base;
+
+  h1,h2,h3,h4,h5,h6,p,div,span,input {
+    font-family: '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', sans-serif;
+  }
+
+  .subarea{
+    padding-top: $g-vertical-gutter-width;
+  }
+}
+
+.marketing-container {
+  padding: 20px 0;
+}
+
+.grid {
+  width: calc(100% - (24px * 2));
+  min-width: $screen-lg-min-width;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.custom-col-left {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.custom-col-right {
+  flex: 0 0 80%;
+  max-width: 80%
+}
