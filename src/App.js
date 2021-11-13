@@ -15,8 +15,8 @@ import ContextHK from './features/contextHK/ContextHK'
 import MultiContext from './features/multiContext/MultiContext'
 import ReducerCounter from './features/reducerCounter'
 
-import ItemPagePC from './checkout/item/pc'
-import { initialData, location, serverSide } from './checkout/item/pc/mockData'
+import ItemPagePC from './checkoutShop/item/pc'
+import { initialData, location, serverSide } from './checkoutShop/item/pc/mockData'
 
 import './App.css'
 

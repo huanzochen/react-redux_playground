@@ -17,7 +17,7 @@ Column.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   size: PropTypes.number, 
-  noGutter: PropTypess.bool
+  noGutter: PropTypes.bool
 }
 
 export default Column
