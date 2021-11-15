@@ -16,6 +16,7 @@
 // Breakpoints
 $screen-lg-min-width: 992px;
 
+$grid-gutter-width: 6px;
 $grid-columns: 12;
 
 $grid-breakpoints: (
@@ -42,5 +43,6 @@ $dark: #333;
 // 4. Space
 // --------------
 
+$spacing-xlg: 24px;
 $spacing-lg: 16px;
 $spacing-sm: 8px;

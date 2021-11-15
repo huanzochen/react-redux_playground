@@ -24,7 +24,8 @@ const ItemPagePC = ({ initialData, location, serverSide }) => {
 }
 
 ItemPagePC.propTypes = {
-  initialData: PropTypes.object.isRequired,
+  // initialData: PropTypes.object.isRequired,
+  initialData: PropTypes.object,
   location: PropTypes.string,
   severSide: PropTypes.bool
 }

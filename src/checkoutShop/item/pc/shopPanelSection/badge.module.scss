@@ -1,0 +1,18 @@
+@import '../../../assets/styles/utils/variables/base';
+
+.badge-area {
+  margin-right: $spacing-xlg;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .badge-title {
+    color: #666;
+    padding-left: $grid-gutter-width;
+    font-size: 14px;
+  }
+}

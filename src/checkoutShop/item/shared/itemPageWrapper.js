@@ -26,7 +26,8 @@ ItemPageWrapper.defaultProps = {
 }
 
 ItemPageWrapper.propTypes = {
-  initialData: PropTypes.object.isRequired,
+  // initialData: PropTypes.object.isRequired,
+  initialData: PropTypes.object,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.element]),
   location: PropTypes.string,
   serverSide: PropTypes.bool

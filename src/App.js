@@ -16,7 +16,6 @@ import MultiContext from './features/multiContext/MultiContext'
 import ReducerCounter from './features/reducerCounter'
 
 import ItemPagePC from './checkoutShop/item/pc'
-import { initialData, location, serverSide } from './checkoutShop/item/pc/mockData'
 
 import './App.css'
 
@@ -55,7 +54,7 @@ function App() {
           <Route path="/multicontext" exact component={MultiContext}></Route>
           <Route path="/reducercounter" exact component={ReducerCounter}></Route>
           <Route path="/itempage">
-            <ItemPagePC initialData={initialData} location={location} serverSide={serverSide}/>
+            <ItemPagePC/>
           </Route>
           {/* </Wrapper> */}
         </Switch>
