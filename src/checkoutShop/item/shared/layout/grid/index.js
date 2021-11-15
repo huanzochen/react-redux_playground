@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-// import styles from './grid.module.scss'
+import styles from './grid.module.scss'
 
 const Grid = ({ children, className }) => {
   const classNames = cx(styles.containerFluid, className)

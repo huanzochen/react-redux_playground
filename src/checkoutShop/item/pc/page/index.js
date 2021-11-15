@@ -15,7 +15,7 @@ const ItemPage = () => {
 
   return (
     <>
-      {/* <MainPage/> */}
+      <MainPage/>
     </>
   ) 
 }

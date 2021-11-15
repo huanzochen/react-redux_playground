@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ShopCard from './shopCard'
 // impoet ShopNavigator from './shopNavigator'
 
-// import styles from './shopPanelSection.module.scss'
+import styles from './shopPanelSection.module.scss'
 
 const ShopPanel = () => {
   return (

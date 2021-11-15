@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-// import styles from './row.module.scss'
+import styles from './row.module.scss'
 
 const Row = ({ children, className, noGutters, ...rest }) => {
   const classNames = cx(styles.row, className, {

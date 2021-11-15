@@ -16,9 +16,14 @@
 // Breakpoints
 $screen-lg-min-width: 992px;
 
+$grid-columns: 12;
+
 $grid-breakpoints: (
   lg: $screen-lg-min-width
 );
+
+// New standard grid design
+$g-gutter-width: 24px;
 
 // New Standard grid design
 $g-vertical-gutter-width: 40px;
@@ -32,3 +37,10 @@ $font-size-base: rem-calc(16);
 // ---------
 $white: #fff;
 $dark: #333;
+
+//
+// 4. Space
+// --------------
+
+$spacing-lg: 16px;
+$spacing-sm: 8px;

@@ -6,20 +6,22 @@ import Col from '../../shared/layout/col'
 import ShopPanelSection from '../shopPanelSection'
 
 
-// import styles from './page.module.scss'
+import styles from './page.module.scss'
 
 const ItemPage = () => {
-  <>
-    <div className={styles.itemContainer}>
-      <Grid className={styles.grid}>
-        <Row noGutters>
-          <Col noGutters size={12}>
-            <ShopPanelSection/>
-          </Col>
-        </Row>
-      </Grid>
-    </div>
-  </>
+  return (
+    <>
+      <div className={styles.itemContainer}>
+        <Grid className={styles.grid}>
+          <Row noGutters>
+            <Col noGutters size={12}>
+              <ShopPanelSection/>
+            </Col>
+          </Row>
+        </Grid>
+      </div>
+    </>
+  )
 }
 
 export default ItemPage
