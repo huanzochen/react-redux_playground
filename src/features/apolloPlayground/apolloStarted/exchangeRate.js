@@ -16,17 +16,20 @@ const GET_RATING = gql`
 const ExchangeRate = () => {
   const { loading, error, data } = useQuery(GET_RATING);
 
-  let content = data.rates.map(({ name, currency, rate }) => {
-    return (
-      <div key={currency}>
-        <span>{name}</span>
-        <span>{currency}</span>
-        <span>{rate}</span>
-      </div>
-    );
-  });
+  let content;
 
-  console.log(data);
+  if (data) {
+    console.log("exchangedRate data has been fetched!", data);
+    content = data.rates.map(({ name, currency, rate }) => {
+      return (
+        <div key={currency}>
+          <span>{name}</span>
+          <span>{currency}</span>
+          <span>{rate}</span>
+        </div>
+      );
+    });
+  }
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
