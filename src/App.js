@@ -1,33 +1,33 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './features/home/Home'
-import CounterHomepage from './features/counter/CounterHomepage'
-import MyCounter from './features/mycounter/MyCounter'
-import GitHub from './features/github/GitHub'
-import EventTargetValue from './features/eventtargetvalue/EventTargetValue'
-import InfiniteScroll from './features/infinitescroll/Main'
-import MouseEvents from './features/mouseEvents/MouseEvents'
-import Cookie from './features/cookie/Cookie'
-import LazyLoad from './features/lazyLoad/LazyLoad'
-import Hoc from './features/hoc/Hoc'
-import Context from './features/context/ContextExample'
-import ContextHK from './features/contextHK/ContextHK'
-import MultiContext from './features/multiContext/MultiContext'
-import ReducerCounter from './features/reducerCounter'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./features/home/Home";
+import CounterHomepage from "./features/counter/CounterHomepage";
+import MyCounter from "./features/mycounter/MyCounter";
+import GitHub from "./features/github/GitHub";
+import EventTargetValue from "./features/eventtargetvalue/EventTargetValue";
+import InfiniteScroll from "./features/infinitescroll/Main";
+import MouseEvents from "./features/mouseEvents/MouseEvents";
+import Cookie from "./features/cookie/Cookie";
+import LazyLoad from "./features/lazyLoad/LazyLoad";
+import Hoc from "./features/hoc/Hoc";
+import Context from "./features/context/ContextExample";
+import ContextHK from "./features/contextHK/ContextHK";
+import MultiContext from "./features/multiContext/MultiContext";
+import ReducerCounter from "./features/reducerCounter";
+import ApolloPlayground from "./features/apolloPlayground";
+import ExchangeRate from "./features/apolloPlayground/exchangeRate";
 
-import ItemPagePC from './checkoutShop/item/pc'
+import ItemPagePC from "./checkoutShop/item/pc";
 
-import './App.css'
+import "./App.css";
 
-import styled from 'styled-components'
-
+import styled from "styled-components";
 
 const Wrapper = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-`
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 function App() {
   return (
@@ -40,28 +40,40 @@ function App() {
           <Route path="/cookie" exact component={Cookie}></Route>
           <Route path="/mouseevents" exact component={MouseEvents}></Route>
           <Route path="/infinitescroll">
-            <InfiniteScroll/>
+            <InfiniteScroll />
           </Route>
-          <Route path="/github" exact component={GitHub} ></Route>
-          <Route path="/eventtargetvalue" exact component={EventTargetValue} ></Route>
-          <Route path="/counter" exact component={CounterHomepage} ></Route>
-          <Route path="/mycounter" exact component={MyCounter} ></Route>
+          <Route path="/github" exact component={GitHub}></Route>
+          <Route
+            path="/eventtargetvalue"
+            exact
+            component={EventTargetValue}
+          ></Route>
+          <Route path="/counter" exact component={CounterHomepage}></Route>
+          <Route path="/mycounter" exact component={MyCounter}></Route>
           {/* <Wrapper> */}
           <Route path="/lazyload" exact component={LazyLoad}></Route>
           <Route path="/hoc" exact component={Hoc}></Route>
           <Route path="/context" exact component={Context}></Route>
           <Route path="/contexthk" exact component={ContextHK}></Route>
           <Route path="/multicontext" exact component={MultiContext}></Route>
-          <Route path="/reducercounter" exact component={ReducerCounter}></Route>
+          <Route
+            path="/reducercounter"
+            exact
+            component={ReducerCounter}
+          ></Route>
           <Route path="/itempage">
-            <ItemPagePC/>
+            <ItemPagePC />
+          </Route>
+          <Route path="/apollo_playground">
+            <ApolloPlayground>
+              <ExchangeRate />
+            </ApolloPlayground>
           </Route>
           {/* </Wrapper> */}
         </Switch>
-
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
