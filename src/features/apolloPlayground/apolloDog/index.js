@@ -3,6 +3,7 @@ import { useState } from "react";
 import ApolloDogWrapper from "./apolloDogWrapper";
 import Dogs from "./dogs";
 import DogPhoto from "./dogPhoto";
+import DogPhotoLazyQuery from "./dogPhotoLazyQuery";
 
 const ApolloDog = () => {
   const [selectedBreed, setSelectedBreed] = useState("");
@@ -19,6 +20,7 @@ const ApolloDog = () => {
         ApolloDog
         <Dogs onDogSelected={onDogSelected} />
         <DogPhoto breedName={selectedBreed}></DogPhoto>
+        <DogPhotoLazyQuery />
       </ApolloDogWrapper>
     </>
   );
