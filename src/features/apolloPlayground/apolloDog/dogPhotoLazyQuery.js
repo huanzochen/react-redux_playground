@@ -9,6 +9,15 @@ const DogPhotoLazyQuery = () => {
   const [getDog, { loading, data, error, refetch }] =
     useLazyQuery(GET_DOG_PHOTO);
 
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("refetching detect");
+    if (data) {
+      refetch();
+    }
+  }, [count]);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :( {error}</p>;
 
@@ -28,6 +37,10 @@ const DogPhotoLazyQuery = () => {
         Get bulldog info powered by lazy query!
       </button>
       <button onClick={() => refetch()}> refresh new Image!</button>
+      <div>
+        A button that count for a number, if number added, refetch the data.
+        <button onClick={() => setCount(count + 1)}> count++</button>
+      </div>
     </div>
   );
 };
