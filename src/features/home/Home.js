@@ -22,6 +22,7 @@ function Home() {
         <a href="/reducercounter">ReducerCounter</a>
         <a href="/itempage">ItemPagePC</a>
         <a href="/apollo_playground">ApolloPlayground</a>
+        <a href="/add-on-list">AddOnList</a>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>

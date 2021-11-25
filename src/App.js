@@ -17,6 +17,7 @@ import ReducerCounter from "./features/reducerCounter";
 import ApolloPlayground from "./features/apolloPlayground";
 import ApolloStarted from "./features/apolloPlayground/apolloStarted";
 import ExchangeRate from "./features/apolloPlayground/apolloStarted/exchangeRate";
+import AddOnList from "./features/addOnList";
 
 import ItemPagePC from "./checkoutShop/item/pc";
 
@@ -71,6 +72,9 @@ function App() {
                 <ExchangeRate />
               </ApolloStarted>
             </ApolloPlayground>
+          </Route>
+          <Route path="/add-on-list">
+            <AddOnList />
           </Route>
           {/* </Wrapper> */}
         </Switch>
