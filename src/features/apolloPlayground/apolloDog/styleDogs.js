@@ -8,6 +8,6 @@ export const StyledDog = styled.div`
   display: flex;
 
   & > div {
-    flex-basis: 50%;
+    flex-basis: 20%;
   }
 `;

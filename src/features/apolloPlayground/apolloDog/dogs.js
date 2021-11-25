@@ -1,31 +1,22 @@
-import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/react-hooks";
+import PropTypes from "prop-types";
+import { GET_DOG_INFO } from "../graphqlData/queries/dogs";
 
 import { StyledDogs, StyledDog } from "./styleDogs";
 
-const GET_DOG_INFO = gql`
-  {
-    dogs {
-      id
-      breed
-    }
-  }
-`;
-
-const Dogs = () => {
+const Dogs = ({ onDogSelected }) => {
   const { loading, error, data } = useQuery(GET_DOG_INFO);
-  if (data) {
-    console.log("dog data has been fetched!", data);
-  }
 
-  let content = "aaa";
+  let content = "";
 
   if (data) {
-    content = data.dogs.map(({ id, breed }) => {
+    console.log("Dogs - data has been fetched!", data);
+    content = data.dogs.map((dog) => {
+      const { id, breed } = dog;
       return (
-        <StyledDog key={id}>
-          <div>{id}</div>:<div>{breed}</div>
-        </StyledDog>
+        <option key={id} value={breed}>
+          {dog.breed}
+        </option>
       );
     });
   }
@@ -33,7 +24,21 @@ const Dogs = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return <StyledDogs>{content}</StyledDogs>;
+  return (
+    <>
+      <select name="dog" onChange={onDogSelected}>
+        {content}
+      </select>
+      <h4>
+        If you selected the same dog twice, the dog image will loads instantly
+        because of caching query results
+      </h4>
+    </>
+  );
+};
+
+Dogs.propTypes = {
+  onDogSelected: PropTypes.func.isRequired,
 };
 
 export default Dogs;
