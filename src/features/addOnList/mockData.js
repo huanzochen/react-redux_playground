@@ -23,8 +23,6 @@ export const items = [
     title: "ARMY PARTY-09 狩獵掛繩漁夫帽(軍綠)",
     price: "980",
     discountPrice: "980",
-    reviewStars: "5.0",
-    reviewCount: 1,
   },
   {
     imageUrl:
