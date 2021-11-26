@@ -14,16 +14,13 @@ const Item = ({ data }) => {
   const { imageUrl, title, discountPrice, price, reviewStars, reviewCount } =
     data;
 
-  console.log("reviewStars", reviewStars);
-  console.log("reviewCount", reviewCount);
-
   return (
     <StyledItem>
       <StyledItemImg src={imageUrl}></StyledItemImg>
       <StyledItemDescription>
         <div className="title">{title}</div>
         <ItemPrice discountPrice={discountPrice} price={price} />
-        <div>Review</div>
+        <Review reviewStars={reviewStars} reviewCount={reviewCount} />
         <StyledBuyButton>
           <FontAwesomeIcon icon={faPlus} />
           <span>加購</span>

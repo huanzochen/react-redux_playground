@@ -11,6 +11,7 @@ export const StyledItem = styled.div`
 `;
 
 export const StyledItemImg = styled.img`
+  border-radius: 6px;
   height: 200px;
 `;
 
