@@ -34,7 +34,7 @@ const DogPhoto = ({ breedName }) => {
       </div>
     );
   }
-  return <p>The first Time, Nothing here...</p>;
+  return <p>haven't select a dog</p>;
 };
 
 DogPhoto.propTypes = {
