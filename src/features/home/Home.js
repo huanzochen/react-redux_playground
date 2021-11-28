@@ -1,12 +1,14 @@
 import React from "react";
 import { StyledHome, DynamicPage, StaticPage } from "./StyleHome";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <StyledHome>
       <DynamicPage>
         <div>Dynamic Page</div>
-        <a href="/">Home</a>
+        <Link to="/cookie">Cookie</Link>
+        <Link to="/">Home</Link>
         <a href="/cookie">Cookie</a>
         <a href="/mouseevents">MouseEvents</a>
         <a href="/infinitescroll">InfiniteScroll</a>
