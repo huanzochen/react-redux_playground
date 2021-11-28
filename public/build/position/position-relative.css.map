@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,OAAO,EAAE,YAAY;EACrB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,gBAAgB,EAAE,aAAa;EAC/B,KAAK,EAAE,KAAK;CACf;;AAED,AAAA,IAAI,CAAC;EACD,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,IAAI;EACT,IAAI,EAAE,IAAI;EACV,UAAU,EAAE,QAAQ;CACvB",
-    "sources": [
-        "position-relative.scss"
-    ],
-    "names": [],
-    "file": "position-relative.css"
-}

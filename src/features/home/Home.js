@@ -7,27 +7,27 @@ function Home() {
     <StyledHome>
       <DynamicPage>
         <div>Dynamic Page</div>
-        <Link to="/cookie">Cookie</Link>
         <Link to="/">Home</Link>
-        <a href="/cookie">Cookie</a>
-        <a href="/mouseevents">MouseEvents</a>
-        <a href="/infinitescroll">InfiniteScroll</a>
-        <a href="/github">GitHub</a>
-        <a href="/eventtargetvalue">EventTargetValue</a>
-        <a href="/counter">Counter</a>
-        <a href="/mycounter">MyCounter</a>
-        <a href="/lazyload">LazyLoad</a>
-        <a href="/hoc">Hoc</a>
-        <a href="/context">Context</a>
-        <a href="/contexthk">ContextWithHook</a>
-        <a href="/multicontext">MultiContext</a>
-        <a href="/reducercounter">ReducerCounter</a>
-        <a href="/itempage">ItemPagePC</a>
-        <a href="/apollo_playground">ApolloPlayground</a>
-        <a href="/add-on-list">AddOnList</a>
+        <Link to="/cookie">Cookie</Link>
+        <Link to="/mouseevents">MouseEvents</Link>
+        <Link to="/infinitescroll">InfiniteScroll</Link>
+        <Link to="/github">GitHub</Link>
+        <Link to="/eventtargetvalue">EventTargetValue</Link>
+        <Link to="/counter">Counter</Link>
+        <Link to="/mycounter">MyCounter</Link>
+        <Link to="/lazyload">LazyLoad</Link>
+        <Link to="/hoc">Hoc</Link>
+        <Link to="/context">Context</Link>
+        <Link to="/contexthk">ContextWithHook</Link>
+        <Link to="/multicontext">MultiContext</Link>
+        <Link to="/reducercounter">ReducerCounter</Link>
+        <Link to="/itempage">ItemPagePC</Link>
+        <Link to="/apollo_playground">ApolloPlayground</Link>
+        <Link to="/add-on-list">AddOnList</Link>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>
+        <Link to="/handmade_grid_system/gridsystem.html">gridsystem</Link>
         <a href="/handmade_grid_system/gridsystem.html">gridsystem</a>
         <a href="/debounce_throttle/debounce_throttle.html">
           debounce&throttle
