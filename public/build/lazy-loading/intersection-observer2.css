@@ -1,0 +1,33 @@
+#box {
+  background-color: #282852;
+  border: 4px solid #141478;
+  -webkit-transition: background-color 1s, border 1s;
+  transition: background-color 1s, border 1s;
+  width: 350px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.vertical {
+  color: white;
+  font: 32px "Arial";
+}
+
+.extra {
+  width: 350px;
+  height: 350px;
+  margin-top: 10px;
+  border: 4px solid #141478;
+  text-align: center;
+  padding: 20px;
+}
+/*# sourceMappingURL=intersection-observer2.css.map */

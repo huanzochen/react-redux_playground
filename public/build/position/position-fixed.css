@@ -1,0 +1,24 @@
+.box-ancestor {
+  width: 75%;
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  background: beige;
+  height: 300px;
+  overflow: scroll;
+}
+
+.box {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  background-color: darkgoldenrod;
+  color: white;
+}
+
+#two {
+  position: fixed;
+  top: 20px;
+  left: 100px;
+}
+/*# sourceMappingURL=position-fixed.css.map */

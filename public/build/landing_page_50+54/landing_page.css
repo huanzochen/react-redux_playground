@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Roboto Black";
+  src: url("../media/fonts/roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../media/fonts/roboto/Roboto-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  font-family: "Roboto Black", Arial, sans-serif;
+}
+
+h1 {
+  color: #4f4d53;
+  font-size: 100px;
+}
+
+h2 {
+  color: #e8be02;
+  font-size: 64px;
+}
+
+h3 {
+  color: #e8be02;
+  font-size: 20px;
+}
+
+h4,
+p {
+  font-family: "Roboto Regular", Arial, sans-serif;
+}
+
+h4 {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+p {
+  font-size: 20px;
+  color: #4f4d53;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar {
+  padding: 2% 10% 2% 20%;
+  background-color: #4f4d53;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+}
+
+.main > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.main > h1 {
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  left: 10%;
+}
+
+.discription {
+  padding: 10% 20% 10% 20%;
+}
+
+.band {
+  background: #e8be02;
+  padding-bottom: 2%;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: #4f4d53;
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+.footer > .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=landing_page.css.map */

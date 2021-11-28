@@ -1,0 +1,33 @@
+body {
+  line-height: 1;
+  height: 100vh;
+  background: azure;
+}
+
+.container {
+  position: relative;
+}
+
+.container.style {
+  border: rgba(221, 124, 124, 0.753) 4px solid;
+  max-width: 50%;
+  width: 50vh;
+  height: 90vh;
+  margin: auto;
+}
+
+.block {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.block.style {
+  width: 10vh;
+  height: 10vh;
+  background-color: #b182f0;
+}
+/*# sourceMappingURL=div3wayscenter1.css.map */
