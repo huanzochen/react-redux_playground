@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/react-hooks";
 import PropTypes from "prop-types";
 import { GET_DOG_INFO } from "../graphqlData/queries/dogs";
-import QueryResult from "./query-result";
+import QueryResult from "./utils/query-result";
 
 import { StyledDogs, StyledDog } from "./styleDogs";
 

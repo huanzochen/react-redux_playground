@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import ApolloDogWrapper from "./apolloDogWrapper";
+import ApolloDogWrapper from "./context/apolloDogWrapper";
 import Dogs from "./dogs";
 import DogPhoto from "./dogPhoto";
 import DogPhotoLazyQuery from "./dogPhotoLazyQuery";
