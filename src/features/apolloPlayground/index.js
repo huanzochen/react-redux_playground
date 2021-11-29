@@ -4,7 +4,6 @@ const ApolloPlayground = ({ children }) => {
   return (
     <>
       <MainPage />
-      {children}
     </>
   );
 };
