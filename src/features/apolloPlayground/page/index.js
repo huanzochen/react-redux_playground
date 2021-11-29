@@ -1,4 +1,5 @@
 import UseQueryPage from "../useQueryPage";
+import UseMutationPage from "../useMutationPage";
 import Row from "../shared/row";
 import Col from "../shared/col";
 
@@ -7,7 +8,8 @@ const MainPage = () => {
     <>
       <Row>
         <Col>
-          <UseQueryPage />
+          <UseMutationPage />
+          {/* <UseQueryPage /> */}
         </Col>
       </Row>
     </>
