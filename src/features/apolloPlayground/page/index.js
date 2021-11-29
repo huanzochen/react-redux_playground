@@ -1,9 +1,15 @@
 import UseQueryPage from "../useQueryPage";
+import Row from "../shared/row";
+import Col from "../shared/col";
 
 const MainPage = () => {
   return (
     <>
-      <UseQueryPage />
+      <Row>
+        <Col>
+          <UseQueryPage />
+        </Col>
+      </Row>
     </>
   );
 };

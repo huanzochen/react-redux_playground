@@ -1,0 +1,48 @@
+//  Global Settings
+//  ---------------
+// Based on Responsive Design Regulation - (https://rakuten.atlassian.net/wiki/pages/viewpage.action?spaceKey=GI&title=Responsive+Design+Regulation)
+//
+///
+//  Table of Contents:
+// 1. Layouts
+// 2. Fonts & Typography
+// 3. Colors
+// 4. Space
+// 5. Transitions
+// 6. Path & Images
+
+// 1. Layouts
+// ----------
+// Breakpoints
+$screen-lg-min-width: 992px;
+
+$grid-gutter-width: 6px;
+$grid-columns: 12;
+
+$grid-breakpoints: (
+  lg: $screen-lg-min-width
+);
+
+// New standard grid design
+$g-gutter-width: 24px;
+
+// New Standard grid design
+$g-vertical-gutter-width: 40px;
+
+// 2. Fonts & Typography
+// ---------------------
+$font-size-base: rem-calc(16);
+
+//
+// 3. Colors
+// ---------
+$white: #fff;
+$dark: #333;
+
+//
+// 4. Space
+// --------------
+
+$spacing-xlg: 24px;
+$spacing-lg: 16px;
+$spacing-sm: 8px;
