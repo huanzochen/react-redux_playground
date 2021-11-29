@@ -15,8 +15,6 @@ import ContextHK from "./features/contextHK/ContextHK";
 import MultiContext from "./features/multiContext/MultiContext";
 import ReducerCounter from "./features/reducerCounter";
 import ApolloPlayground from "./features/apolloPlayground";
-import ApolloStarted from "./features/apolloPlayground/apolloStarted";
-import ExchangeRate from "./features/apolloPlayground/apolloStarted/exchangeRate";
 import AddOnList from "./features/addOnList";
 
 import ItemPagePC from "./checkoutShop/item/pc";
@@ -67,11 +65,7 @@ function App() {
             <ItemPagePC />
           </Route>
           <Route path="/apollo_playground">
-            <ApolloPlayground>
-              <ApolloStarted>
-                <ExchangeRate />
-              </ApolloStarted>
-            </ApolloPlayground>
+            <ApolloPlayground></ApolloPlayground>
           </Route>
           <Route path="/add-on-list">
             <AddOnList />

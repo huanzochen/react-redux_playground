@@ -1,9 +1,9 @@
-import ApolloDog from "./apolloDog";
+import MainPage from "./page";
 
 const ApolloPlayground = ({ children }) => {
   return (
     <>
-      <ApolloDog />
+      <MainPage />
       {children}
     </>
   );
