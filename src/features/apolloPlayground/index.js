@@ -5,12 +5,15 @@ const ApolloPlayground = ({ children }) => {
   return (
     <>
       <DetectBreakPoint>
-        {(breakpoint) => (
-          <>
-            <MainPage />
-            {children}
-          </>
-        )}
+        {(breakpoint) => {
+          console.log("breakpoint:", breakpoint);
+          return (
+            <>
+              <MainPage />
+              {children}
+            </>
+          );
+        }}
       </DetectBreakPoint>
     </>
   );
