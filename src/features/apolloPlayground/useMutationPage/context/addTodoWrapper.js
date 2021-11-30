@@ -4,9 +4,10 @@ import { ApolloClient } from "apollo-client";
 import { ApolloProvider } from "@apollo/react-hooks";
 
 const client = new ApolloClient({
-  // This instance related on
-  uri: "https://plp0mopxq.sse.codesandbox.io/",
-  link: new HttpLink(),
+  // This instance related on https://plp0mopxq.sse.codesandbox.io/
+  link: new HttpLink({
+    uri: "https://plp0mopxq.sse.codesandbox.io/",
+  }),
   cache: new InMemoryCache(),
 });
 
