@@ -27,9 +27,8 @@ const AddTodo = () => {
           ref={(node) => {
             input = node;
           }}
-        >
-          <button type="submit">Add Todo</button>
-        </input>
+        />
+        <button type="submit">Add Todo</button>
       </form>
     </div>
   );

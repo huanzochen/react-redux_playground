@@ -1,9 +1,12 @@
 import AddTodo from "../addTodo";
+import AddTodoWrapper from "../addTodo/context/addTodoWrapper";
 
 const UseMutationPage = () => {
   return (
     <>
-      <AddTodo />
+      <AddTodoWrapper>
+        <AddTodo />
+      </AddTodoWrapper>
     </>
   );
 };

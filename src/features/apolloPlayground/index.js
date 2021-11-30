@@ -1,9 +1,17 @@
 import MainPage from "./page";
+import DetectBreakPoint from "./common/renderProps/detectBreakpoint";
 
 const ApolloPlayground = ({ children }) => {
   return (
     <>
-      <MainPage />
+      <DetectBreakPoint>
+        {(breakpoint) => (
+          <>
+            <MainPage />
+            {children}
+          </>
+        )}
+      </DetectBreakPoint>
     </>
   );
 };
