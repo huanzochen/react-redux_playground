@@ -19,7 +19,10 @@ const AddTodo = () => {
 
   return (
     <div>
-      Add Todo and refresh, after it you can update it below.
+      <h4>
+        Simple useMutation, Add Todo and refresh, after it you can update it
+        below.
+      </h4>
       <form
         onSubmit={(e) => {
           e.preventDefault();

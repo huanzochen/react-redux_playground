@@ -31,7 +31,7 @@ const UpdateTodo = () => {
 
     return (
       <div key={id}>
-        <h2>useMutation - update with a single entity.</h2>
+        <h4>useMutation - update with a single entity.</h4>
         <p>id: {id} </p>
         <p>type: {type}</p>
         <form
