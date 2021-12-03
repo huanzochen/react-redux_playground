@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import ItemContext from "./context";
+import ItemContext from ".";
 
 const ItemContextProvider = ({ children }) => {
   const sandra = "squirrel";
@@ -9,7 +9,7 @@ const ItemContextProvider = ({ children }) => {
   const getContextValue = () => {
     return {
       sandra: sandra,
-      me: me,
+      tommy: me,
     };
   };
 
@@ -18,6 +18,10 @@ const ItemContextProvider = ({ children }) => {
       {children}
     </ItemContext.Provider>
   );
+};
+
+ItemContextProvider.propTypes = {
+  children: PropTypes.node,
 };
 
 export default ItemContextProvider;

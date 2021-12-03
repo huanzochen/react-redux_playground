@@ -20,7 +20,9 @@ client
     `,
   })
   .then((result) =>
-    console.log("the apollo client had already fetch the data first!")
+    console.log(
+      "the src/features/apolloPlayground/apolloStarted/index.js had already fetch the data first!"
+    )
   );
 
 const ApolloStarted = ({ children }) => {

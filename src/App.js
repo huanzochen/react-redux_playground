@@ -11,7 +11,7 @@ import Cookie from "./features/cookie/Cookie";
 import LazyLoad from "./features/lazyLoad/LazyLoad";
 import Hoc from "./features/hoc/Hoc";
 import Context from "./features/context/ContextExample";
-import ContextHK from "./features/contextHK/ContextHK";
+import ContextHK from "./features/contextHK";
 import MultiContext from "./features/multiContext/MultiContext";
 import ReducerCounter from "./features/reducerCounter";
 import ApolloPlayground from "./features/apolloPlayground";
