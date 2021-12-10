@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/utils/variables/base';
+@import "../../../../assets/styles/utils/variables/base";
 
 .container {
   width: 100%;
@@ -8,7 +8,7 @@
   padding: $spacing-lg;
 }
 
-.shop-info {
+.shopInfo {
   display: flex;
 }
 
@@ -20,34 +20,40 @@
   min-width: 64px;
 }
 
-.title-section {
+.titleSection {
   display: flex;
   align-items: center;
   margin: 8px 0;
   line-height: 24px;
   height: 24px;
+
+  .shopName {
+    font-size: 18px;
+    font-weight: 700;
+    color: $dark;
+    max-width: 400px;
+  }
 }
 
-.label-section {
+.labelSection {
   display: flex;
   align-items: center;
-  
+
   // 這裡面根本沒用到 p ???
-    p { 
-      margin: 0;
-      line-height: 1
-    }
+  p {
+    margin: 0;
+    line-height: 1;
+  }
+
+  .badgeContainer {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
-
-
-.shop-contact {
+.shopContact {
   margin: $spacing-sm 0;
   display: flex;
   align-items: flex-end;
   font-size: 12px;
 }
-
-
-
-

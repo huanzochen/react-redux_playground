@@ -1,13 +1,14 @@
+import { useItemCtx } from "../../../shared/context";
+import Badge from "../badge";
 
-import { useItemCtx } from '../../../shared/context'
-import Badge from '../badge'
+import { filterEnabledBadges } from "../../../../utils/item";
+import { isNotEmptyArray } from "../../../../utils/common/base";
 
-import { filterEnabledBadges } from '../../../../utils/item'
-import { isNotEmptyArray } from '../../../../utils/common/base'
+import { lineClampStyle } from "../../../../utils/common/style";
 
-import styles from './shopCard.module.scss'
+import styles from "./shopCard.module.scss";
 
-const MAX_BADGE_COUNT = 3
+const MAX_BADGE_COUNT = 3;
 
 const ShopCard = () => {
   const {
@@ -23,32 +24,35 @@ const ShopCard = () => {
       },
     },
     // pageDesignFields: { shopImageUrl },
-  } = useItemCtx()
+  } = useItemCtx();
 
-  const enabledBadges = filterEnabledBadges(badges).slice(0, MAX_BADGE_COUNT)
+  const enabledBadges = filterEnabledBadges(badges).slice(0, MAX_BADGE_COUNT);
 
-  console.log(isInquiryAccepted,
-    shopId,
-    shopUrl,
-    badges,
-  )
+  console.log(isInquiryAccepted, shopId, shopUrl, badges);
 
   return (
     <div className={styles.container}>
       <div className={styles.shopInfo}>
         {/* <ShopLogo></ShopLogo> */}
         <div className={styles.detail}>
-          <div className={styles.titlesection}>
-
+          <div className={styles.titleSection}>
+            <a
+              className={styles.shopName}
+              href="www.google.com.tw"
+              target="_blank"
+              style={lineClampStyle(1)}
+            >
+              {shopName}
+            </a>
           </div>
           <div className={styles.labelSection}>
-            {isNotEmptyArray(enabledBadges) && 
-            <div className={styles.badgeContainer}>
-              {enabledBadges.map((badge, index) => 
-                <Badge key={`shop-badge-${index}`} {...badge}></Badge>
-              )}
-            </div>
-            }
+            {isNotEmptyArray(enabledBadges) && (
+              <div className={styles.badgeContainer}>
+                {enabledBadges.map((badge, index) => (
+                  <Badge key={`shop-badge-${index}`} {...badge}></Badge>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -57,7 +61,7 @@ const ShopCard = () => {
         {/* {isInquiryAccepted && <ShopContact shopUrl={shopUrl} */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ShopCard
+export default ShopCard;

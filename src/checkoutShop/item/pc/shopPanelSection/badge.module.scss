@@ -1,6 +1,6 @@
-@import '../../../assets/styles/utils/variables/base';
+@import "../../../assets/styles/utils/variables/base";
 
-.badge-area {
+.badgeArea {
   margin-right: $spacing-xlg;
   align-items: center;
   cursor: pointer;
@@ -10,7 +10,7 @@
     height: 14px;
   }
 
-  .badge-title {
+  .badgeTitle {
     color: #666;
     padding-left: $grid-gutter-width;
     font-size: 14px;

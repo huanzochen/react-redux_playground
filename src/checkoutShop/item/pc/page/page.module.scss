@@ -1,15 +1,25 @@
-@import '../../../assets/styles/utils/variables/base';
+@import "../../../assets/styles/utils/variables/base";
 
-.item-container {
+.itemContainer {
   background: $white;
   color: $dark;
   font-size: $font-size-base;
 
-  h1,h2,h3,h4,h5,h6,p,div,span,input {
-    font-family: '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  div,
+  span,
+  input {
+    font-family: "微軟正黑體", "Microsoft JhengHei", "Helvetica Neue",
+      sans-serif;
   }
 
-  .subarea{
+  .subarea {
     padding-top: $g-vertical-gutter-width;
   }
 }
@@ -25,12 +35,12 @@
   margin: 0 auto;
 }
 
-.custom-col-left {
+.customColLeft {
   flex: 0 0 20%;
   max-width: 20%;
 }
 
-.custom-col-right {
+.customColRight {
   flex: 0 0 80%;
-  max-width: 80%
+  max-width: 80%;
 }

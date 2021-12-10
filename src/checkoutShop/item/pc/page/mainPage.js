@@ -1,12 +1,11 @@
-import { ITEM_DOM_ID } from '../../../constants/shop/item'
+import { ITEM_DOM_ID } from "../../../constants/shop/item";
 
-import Grid from '../../shared/layout/grid'
-import Row from '../../shared/layout/row'
-import Col from '../../shared/layout/col'
-import ShopPanelSection from '../shopPanelSection'
+import Grid from "../../shared/layout/grid";
+import Row from "../../shared/layout/row";
+import Col from "../../shared/layout/col";
+import ShopPanelSection from "../shopPanelSection";
 
-
-import styles from './page.module.scss'
+import styles from "./page.module.scss";
 
 const ItemPage = () => {
   return (
@@ -15,13 +14,13 @@ const ItemPage = () => {
         <Grid className={styles.grid}>
           <Row noGutters>
             <Col noGutters size={12}>
-              <ShopPanelSection/>
+              <ShopPanelSection />
             </Col>
           </Row>
         </Grid>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ItemPage
+export default ItemPage;

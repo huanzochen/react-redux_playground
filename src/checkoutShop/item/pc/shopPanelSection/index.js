@@ -1,25 +1,25 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ShopCard from './shopCard'
-// impoet ShopNavigator from './shopNavigator'
+import ShopCard from "./shopCard";
+// import ShopNavigator from './shopNavigator'
 
-import styles from './shopPanelSection.module.scss'
+import styles from "./shopPanelSection.module.scss";
 
 const ShopPanel = () => {
   return (
     <div className={styles.container}>
-      <ShopCard/>
+      <ShopCard />
       {/* <ShopNavigationBar isTablet={isTablet}> */}
     </div>
-  )
-}
+  );
+};
 
 ShopPanel.defaultProps = {
-  isTablet: false
-}
+  isTablet: false,
+};
 
 ShopPanel.propTypes = {
-  isTablet: PropTypes.bool
-}
+  isTablet: PropTypes.bool,
+};
 
-export default ShopPanel
+export default ShopPanel;
