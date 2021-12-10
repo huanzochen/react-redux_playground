@@ -1,5 +1,4 @@
-@import '../../../../assets/styles/utils/variables/base';
-
+@import "../../../../assets/styles/utils/variables/base";
 
 @mixin make-col($size, $columns: $grid-columns) {
   flex: 0 0 percentage($size / $columns);
@@ -79,7 +78,7 @@
   @include make-col(12);
 }
 
-.no-gutters {
+.noGutters {
   padding-right: 0;
   padding-left: 0;
 }
