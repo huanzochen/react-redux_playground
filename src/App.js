@@ -11,11 +11,12 @@ import Cookie from "./features/cookie/Cookie";
 import LazyLoad from "./features/lazyLoad/LazyLoad";
 import Hoc from "./features/hoc/Hoc";
 import Context from "./features/context/ContextExample";
-import ContextHK from "./features/contextHK";
+import ContextHK from "./features/contextHook";
 import MultiContext from "./features/multiContext/MultiContext";
 import ReducerCounter from "./features/reducerCounter";
 import ApolloPlayground from "./features/apolloPlayground";
 import AddOnList from "./features/addOnList";
+import XState from "./features/xState";
 
 import ItemPagePC from "./checkoutShop/item/pc";
 
@@ -69,6 +70,9 @@ function App() {
           </Route>
           <Route path="/add-on-list">
             <AddOnList />
+          </Route>
+          <Route>
+            <XState />
           </Route>
           {/* </Wrapper> */}
         </Switch>
