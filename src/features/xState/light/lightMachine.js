@@ -24,6 +24,7 @@ const lightMachine = createMachine(
         on: {
           [LIGHT_EVENTS.CLICK]: {
             target: LIGHT_STATES.YELLOW,
+            actions: ["on_click"],
           },
           [LIGHT_EVENTS.BROKEN]: LIGHT_STATES.BLACK,
         },
@@ -63,6 +64,8 @@ const lightMachine = createMachine(
           count: context.count + 1,
         };
       }),
+      on_click: (context, event) =>
+        console.log("it is onClick! The event is: ", event),
     },
   }
 );

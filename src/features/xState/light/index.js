@@ -32,6 +32,7 @@ const Light = () => {
   // console.log('stateBroken.matches("black"):', stateBroken.matches("black"));
 
   const [light, sendLight] = useMachine(lightMachine, { devtools: true });
+  console.log("light:", light);
   // console.log("light.context", light.context);
   // console.log("light.value:", light.value);
 
@@ -49,8 +50,8 @@ const Light = () => {
 
   return (
     <div className={styles.container}>
+      <span>light</span>
       <div className={styles.lightSection}>
-        <span>light</span>
         <div className={styles.light}>
           {light.matches(LIGHT_STATES.RED) && (
             <div className={cx(styles.red)} />
