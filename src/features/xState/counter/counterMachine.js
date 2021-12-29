@@ -9,19 +9,25 @@ export const COUNTER_EVENTS = {
 };
 
 export const COUNTER_STATES = {
-  ENABLED: "ENABLED",
-  DISABLED: "DISABLED",
+  root: "counter",
+  counter: {
+    enabled: "enabled",
+    disabled: "disabled",
+  },
 };
 
 const counterMachine = createMachine(
   {
     id: "counter",
-    initial: "ENABLED",
+    initial: COUNTER_STATES.counter.enabled,
     context: {
       count: 1,
     },
+    // states: {
+    // [COUNTER_STATES.root]: {
+    // type: "parallel",
     states: {
-      [COUNTER_STATES.ENABLED]: {
+      [COUNTER_STATES.counter.enabled]: {
         on: {
           [COUNTER_EVENTS.INCREMENT]: {
             actions: ["increment"],
@@ -33,17 +39,19 @@ const counterMachine = createMachine(
             actions: ["reset"],
           },
           [COUNTER_EVENTS.DISABLE]: {
-            target: COUNTER_STATES.DISABLED,
+            target: COUNTER_STATES.counter.disabled,
           },
         },
       },
-      [COUNTER_STATES.DISABLED]: {
+      [COUNTER_STATES.counter.disabled]: {
         on: {
-          [COUNTER_EVENTS.ENABLE]: COUNTER_STATES.ENABLED,
+          [COUNTER_EVENTS.ENABLE]: COUNTER_STATES.counter.enabled,
         },
       },
     },
   },
+  // },
+  // },
   {
     actions: {
       increment: assign((context, event) => {
