@@ -24,6 +24,7 @@ const CounterUseInterpret = () => {
     },
     (state) => {
       // observerble function 目前還不知道用途為何
+      // 有跟 steven 聊到這個，他覺得應該是特定 state 的情況下會用到，我同意
       console.log("observerable function fired! 還不清楚者東西能幹嘛");
     }
   );
