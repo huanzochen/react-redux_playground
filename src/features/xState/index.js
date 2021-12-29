@@ -1,3 +1,4 @@
+import CounterUseInterpret from "./counterUseInterpret";
 import Counter from "./counter";
 import Light from "./light";
 
@@ -8,6 +9,7 @@ const XState = () => {
     <>
       <h1> XState</h1>
       <div className={styles.gallery}>
+        <CounterUseInterpret />
         <Counter />
         <Light />
       </div>

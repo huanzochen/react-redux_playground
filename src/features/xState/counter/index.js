@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useMachine } from "@xstate/react";
-import counterMachine, { COUNTER_EVENTS } from "./counterMachine";
+import counterMachine, {
+  COUNTER_EVENTS,
+  COUNTER_STATES,
+} from "./counterMachine";
 
 import cx from "classnames";
 
@@ -13,7 +16,7 @@ const Counter = () => {
 
   const [count, setCount] = useState(0);
 
-  const isDISABLED = counter.matches("DISABLED");
+  const isDISABLED = counter.matches(COUNTER_STATES.DISABLED);
 
   console.log("counter", counter);
 
