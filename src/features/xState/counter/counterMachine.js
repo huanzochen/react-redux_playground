@@ -8,6 +8,11 @@ export const COUNTER_EVENTS = {
   ENABLE: "ENABLE",
 };
 
+export const COUNTER_STATES = {
+  ENABLED: "ENABLED",
+  DISABLED: "DISABLED",
+};
+
 const counterMachine = createMachine(
   {
     id: "counter",
@@ -16,7 +21,7 @@ const counterMachine = createMachine(
       count: 1,
     },
     states: {
-      ENABLED: {
+      [COUNTER_STATES.ENABLED]: {
         on: {
           [COUNTER_EVENTS.INCREMENT]: {
             actions: ["increment"],
@@ -28,13 +33,13 @@ const counterMachine = createMachine(
             actions: ["reset"],
           },
           [COUNTER_EVENTS.DISABLE]: {
-            target: "DISABLED",
+            target: COUNTER_STATES.DISABLED,
           },
         },
       },
-      DISABLED: {
+      [COUNTER_STATES.DISABLED]: {
         on: {
-          [COUNTER_EVENTS.ENABLE]: "ENABLED",
+          [COUNTER_EVENTS.ENABLE]: COUNTER_STATES.ENABLED,
         },
       },
     },
