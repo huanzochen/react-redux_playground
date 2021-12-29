@@ -27,7 +27,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@xstate/inspect": "0.3.0",
-    "@xstate/react": "1.2.1",
+    "@xstate/react": "1.6.3",
     "apollo-boost": "0.4.9",
     "apollo-cache-inmemory": "^1.6.3",
     "apollo-client": "^2.6.4",
@@ -47,7 +47,7 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.3",
-    "xstate": "4.15.1"
+    "xstate": "4.26.1"
   },
   "scripts": {
     "start": "react-scripts start",
