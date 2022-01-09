@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
-import ShopCard from "./shopCard";
+import ShopCard from './shopCard'
 // import ShopNavigator from './shopNavigator'
 
-import styles from "./shopPanelSection.module.scss";
+import styles from './shopPanelSection.module.scss'
 
 const ShopPanel = () => {
   return (
@@ -11,15 +11,15 @@ const ShopPanel = () => {
       <ShopCard />
       {/* <ShopNavigationBar isTablet={isTablet}> */}
     </div>
-  );
-};
+  )
+}
 
 ShopPanel.defaultProps = {
   isTablet: false,
-};
+}
 
 ShopPanel.propTypes = {
   isTablet: PropTypes.bool,
-};
+}
 
-export default ShopPanel;
+export default ShopPanel

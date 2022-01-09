@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import ApolloDogWrapper from "./context/apolloDogWrapper";
-import Dogs from "./dogs";
-import DogPhoto from "./dogPhoto";
-import DogPhotoLazyQuery from "./dogPhotoLazyQuery";
+import ApolloDogWrapper from './context/apolloDogWrapper'
+import Dogs from './dogs'
+import DogPhoto from './dogPhoto'
+import DogPhotoLazyQuery from './dogPhotoLazyQuery'
 
 const ApolloDog = () => {
-  const [selectedBreed, setSelectedBreed] = useState("");
+  const [selectedBreed, setSelectedBreed] = useState('')
 
   const onDogSelected = (e) => {
-    console.log("Apollo Dpg - ", e.target.value, "has been selected");
-    setSelectedBreed(e.target.value);
-  };
+    console.log('Apollo Dpg - ', e.target.value, 'has been selected')
+    setSelectedBreed(e.target.value)
+  }
 
   return (
     <>
@@ -23,6 +23,6 @@ const ApolloDog = () => {
         <DogPhotoLazyQuery />
       </ApolloDogWrapper>
     </>
-  );
-};
-export default ApolloDog;
+  )
+}
+export default ApolloDog

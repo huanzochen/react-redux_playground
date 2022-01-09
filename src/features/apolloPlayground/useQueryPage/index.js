@@ -1,6 +1,6 @@
-import ApolloDog from "../apolloDog";
-import ApolloStarted from "../apolloStarted";
-import ExchangeRate from "../apolloStarted/exchangeRate";
+import ApolloDog from '../apolloDog'
+import ApolloStarted from '../apolloStarted'
+import ExchangeRate from '../apolloStarted/exchangeRate'
 
 const UseQueryPage = () => {
   return (
@@ -10,7 +10,7 @@ const UseQueryPage = () => {
         <ExchangeRate />
       </ApolloStarted>
     </>
-  );
-};
+  )
+}
 
-export default UseQueryPage;
+export default UseQueryPage

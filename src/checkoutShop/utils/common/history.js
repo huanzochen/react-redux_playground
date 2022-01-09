@@ -9,6 +9,7 @@ import { createBrowserHistory, createMemoryHistory } from 'history'
  * please check https://github.com/ReactTraining/history#usage
  */
 
-export const $history = typeof window === 'undefined'
-  ? createMemoryHistory() // for SSR
-  : createBrowserHistory() // for CSR
+export const $history =
+  typeof window === 'undefined'
+    ? createMemoryHistory() // for SSR
+    : createBrowserHistory() // for CSR

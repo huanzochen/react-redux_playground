@@ -1,11 +1,11 @@
-import { interpret } from "xstate";
-import { useMachine } from "@xstate/react";
+import { interpret } from 'xstate'
+import { useMachine } from '@xstate/react'
 
-import cx from "classnames";
+import cx from 'classnames'
 
-import lightMachine, { LIGHT_STATES, LIGHT_EVENTS } from "./lightMachine";
+import lightMachine, { LIGHT_STATES, LIGHT_EVENTS } from './lightMachine'
 
-import styles from "./light.module.scss";
+import styles from './light.module.scss'
 
 const Light = () => {
   // const state0 = lightMachine.initialState;
@@ -30,47 +30,39 @@ const Light = () => {
   // console.log(state3.matches("green"));
   // console.log('stateBroken.matches("black"):', stateBroken.matches("black"));
 
-  const [light, sendLight] = useMachine(lightMachine, { devtools: true });
-  console.log("light:", light);
+  const [light, sendLight] = useMachine(lightMachine, { devtools: true })
+  console.log('light:', light)
   // console.log("light.context", light.context);
   // console.log("light.value:", light.value);
 
   const handleOnClick = () => {
-    sendLight(LIGHT_EVENTS.CLICK);
-  };
+    sendLight(LIGHT_EVENTS.CLICK)
+  }
 
   const handleOnBroken = () => {
-    sendLight(LIGHT_EVENTS.BROKEN);
-  };
+    sendLight(LIGHT_EVENTS.BROKEN)
+  }
 
   const handleOnFix = () => {
-    sendLight(LIGHT_EVENTS.FIX);
-  };
+    sendLight(LIGHT_EVENTS.FIX)
+  }
 
   return (
     <div className={styles.container}>
       <span>light</span>
       <div className={styles.lightSection}>
         <div className={styles.light}>
-          {light.matches(LIGHT_STATES.RED) && (
-            <div className={cx(styles.red)} />
-          )}
-          {light.matches(LIGHT_STATES.GREEN) && (
-            <div className={cx(styles.green)} />
-          )}
-          {light.matches(LIGHT_STATES.YELLOW) && (
-            <div className={cx(styles.yellow)} />
-          )}
-          {light.matches(LIGHT_STATES.BLACK) && (
-            <div className={cx(styles.black)} />
-          )}
+          {light.matches(LIGHT_STATES.RED) && <div className={cx(styles.red)} />}
+          {light.matches(LIGHT_STATES.GREEN) && <div className={cx(styles.green)} />}
+          {light.matches(LIGHT_STATES.YELLOW) && <div className={cx(styles.yellow)} />}
+          {light.matches(LIGHT_STATES.BLACK) && <div className={cx(styles.black)} />}
         </div>
         <button onClick={handleOnClick}>CLICK!</button>
         <button onClick={handleOnBroken}>BROKEN!</button>
         <button onClick={handleOnFix}>FIX!</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Light;
+export default Light

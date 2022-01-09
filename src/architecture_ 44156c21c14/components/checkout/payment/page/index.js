@@ -14,21 +14,21 @@ import styles from './page.module.scss'
 
 const PaymentPage = () => {
   return (
-    <div className={styles.container}> 
+    <div className={styles.container}>
       <Row>
         <Col noGutters size={8}>
-          <GlobalError/>
-          <ShippingSection/>
-          <Rakutenpoint/>
-          <Coupon/>
-          <PaymentMethodSection/>
-          <Invoice/>
+          <GlobalError />
+          <ShippingSection />
+          <Rakutenpoint />
+          <Coupon />
+          <PaymentMethodSection />
+          <Invoice />
           <ShopperInfo />
           <ShopContent />
           <CheckBox />
         </Col>
         <Col noGutters size={4}>
-          <CheckoutSection/>
+          <CheckoutSection />
         </Col>
       </Row>
     </div>

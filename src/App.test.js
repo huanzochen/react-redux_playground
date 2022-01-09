@@ -19,7 +19,6 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div)
 })
 
-
 test('render without error', () => {
   const wrapper = shallow(<App />)
   const appComponent = wrapper.find('.App')

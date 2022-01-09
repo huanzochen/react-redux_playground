@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Cat from './Cat'
 import enhance from './enhance'
 
-// const 
+// const
 
 const EnhancedAnimal = enhance(Cat)
 
@@ -11,10 +11,7 @@ function Hoc() {
   return (
     <div>
       aaa
-      <EnhancedAnimal
-        color={'yellow'}
-      >
-      </EnhancedAnimal>
+      <EnhancedAnimal color={'yellow'}></EnhancedAnimal>
     </div>
   )
 }

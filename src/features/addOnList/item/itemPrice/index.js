@@ -1,4 +1,4 @@
-import { StyledItemPrice } from "./styleItemPrice";
+import { StyledItemPrice } from './styleItemPrice'
 
 const itemPrice = ({ discountPrice, price }) => {
   return (
@@ -13,7 +13,7 @@ const itemPrice = ({ discountPrice, price }) => {
         <span className="description">起</span>
       </span>
     </StyledItemPrice>
-  );
-};
+  )
+}
 
-export default itemPrice;
+export default itemPrice

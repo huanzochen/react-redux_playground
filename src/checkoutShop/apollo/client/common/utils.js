@@ -15,11 +15,11 @@ export const getClient = ({
     link,
     cache: new InMemoryCache({
       fragmentMatcher,
-      ...dataIdFromObject && { dataIdFromObject },
+      ...(dataIdFromObject && { dataIdFromObject }),
     }),
-    ...resolvers && { resolvers },
-    ...defaults && { defaults },
-    ...typeDefs && { typeDefs },
+    ...(resolvers && { resolvers }),
+    ...(defaults && { defaults }),
+    ...(typeDefs && { typeDefs }),
     connectToDevTools: process.env.NODE_ENV !== 'production',
   })
 }

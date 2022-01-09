@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { nanoid } from "@reduxjs/toolkit";
+import React, { useState, useEffect, useRef } from 'react'
+import { nanoid } from '@reduxjs/toolkit'
 
 /**
  *
@@ -12,112 +12,112 @@ import { nanoid } from "@reduxjs/toolkit";
 
 function ScrollEvent() {
   const [fakeData, setFakeData] = useState([
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-    "sadassa",
-  ]);
-  const refDiv = React.useRef();
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+    'sadassa',
+  ])
+  const refDiv = React.useRef()
 
   // 被綁定 ref 的該原生 DOM 是否已經觸底.
   function isBottom(ref) {
     if (!ref.current) {
-      return false;
+      return false
     }
     // console.log(`ref.current.getBoundingClientRect().bottom=${ref.current.getBoundingClientRect().bottom}`)
-    return ref.current.getBoundingClientRect().bottom <= window.innerHeight;
+    return ref.current.getBoundingClientRect().bottom <= window.innerHeight
   }
 
   useEffect(() => {
     const onScroll = (e) => {
-      console.log(isBottom(refDiv));
-    };
+      console.log(isBottom(refDiv))
+    }
     // Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
-    document.addEventListener("scroll", onScroll);
-    return () => document.removeEventListener("scroll", onScroll);
-  });
+    document.addEventListener('scroll', onScroll)
+    return () => document.removeEventListener('scroll', onScroll)
+  })
 
-  let content;
+  let content
   content = fakeData.map((data) => {
-    return <div key={nanoid()}>{data}</div>;
-  });
+    return <div key={nanoid()}>{data}</div>
+  })
 
-  return <div ref={refDiv}>{content}</div>;
+  return <div ref={refDiv}>{content}</div>
 }
 
-export default ScrollEvent;
+export default ScrollEvent
 
 /**
  * https://developer.mozilla.org/zh-TW/docs/Web/API/Document/scroll_event

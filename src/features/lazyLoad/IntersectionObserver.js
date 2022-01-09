@@ -5,7 +5,7 @@ let listenerCallbacks = new WeakMap()
 let watcher
 
 function intersectionsCallback(entries, observer) {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (listenerCallbacks.has(entry.target)) {
       let callback = listenerCallbacks.get(entry.target)
 
@@ -14,7 +14,7 @@ function intersectionsCallback(entries, observer) {
         listenerCallbacks.delete(entry.target)
         callback()
       }
-    } 
+    }
   })
 }
 
@@ -23,7 +23,7 @@ function getIntersectionObserver() {
     watcher = new IntersectionObserver(intersectionsCallback, {
       root: null,
       rootMargin: '0px',
-      thresholds: [0.1]
+      thresholds: [0.1],
     })
   }
   return watcher
@@ -33,7 +33,7 @@ export function useIntersection(element, callback) {
   useEffect(() => {
     // console.log(element)
     // element 要是個 ref()
-    let target = element.current 
+    let target = element.current
     let observer = getIntersectionObserver()
     listenerCallbacks.set(target, callback)
     observer.observe(target)

@@ -16,7 +16,7 @@ const Badge = ({ badgeImage, badgeName, badgeDescription }) => {
 Badge.propTypes = {
   badgeName: PropTypes.string.isRequired,
   badgeDescription: PropTypes.string.isRequired,
-  badgeImage: PropTypes.string.isRequired
+  badgeImage: PropTypes.string.isRequired,
 }
 
 export default Badge

@@ -5,21 +5,17 @@ import styles from './col.module.scss'
 
 const Column = ({ children, noGutters, size, className }) => {
   const classNames = cx(styles.col, styles[`col${size}`], className, {
-    [styles.noGutters]: noGutters
+    [styles.noGutters]: noGutters,
   })
 
-  return (
-    <div className={classNames}>
-      {children}
-    </div>
-  )  
+  return <div className={classNames}>{children}</div>
 }
 
 Column.PropTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   size: PropTypes.number,
-  noGutters: PropTypes.bool
+  noGutters: PropTypes.bool,
 }
 
 export default Column

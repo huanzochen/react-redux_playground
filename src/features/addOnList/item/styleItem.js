@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledItem = styled.div`
   display: flex;
@@ -8,12 +8,12 @@ export const StyledItem = styled.div`
   border-radius: 6px;
   max-width: 200px;
   font-size: 14px;
-`;
+`
 
 export const StyledItemImg = styled.img`
   border-radius: 6px;
   height: 200px;
-`;
+`
 
 export const StyledItemDescription = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ export const StyledItemDescription = styled.div`
     text-overflow: ellipsis;
     overflow: hidden;
   }
-`;
+`
 
 export const StyledBuyButton = styled.button`
   background-color: white;
@@ -44,4 +44,4 @@ export const StyledBuyButton = styled.button`
     margin-left: 3px;
     font-size: 15px;
   }
-`;
+`

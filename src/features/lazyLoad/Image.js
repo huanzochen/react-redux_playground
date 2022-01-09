@@ -2,19 +2,9 @@ import { useState, useRef } from 'react'
 
 import classnames from 'classnames'
 import { useIntersection } from './IntersectionObserver'
-import {
-  StyledImage,
-  Mockup,
-  Mockup2,
-  Img
-} from './StyleImage'
+import { StyledImage, Mockup, Mockup2, Img } from './StyleImage'
 
-function Image({ 
-  id,
-  src,
-  height,
-  width
-}) {
+function Image({ id, src, height, width }) {
   const [isInView, setIsInView] = useState(false)
   const [isLoad, setIsLoad] = useState(false)
   const imgRef = useRef()
@@ -29,24 +19,14 @@ function Image({
   }
 
   return (
-    <StyledImage
-      width={width} 
-      height={height} 
-      ref={imgRef}
-    >
+    <StyledImage width={width} height={height} ref={imgRef}>
+      <Mockup className={classnames({ loading: !isLoad })} />
 
-      <Mockup className={classnames({ 'loading': !isLoad })}/>
-
-      {isInView &&
-       <Img
-         src={src}
-         onLoad={handleOnload}
-         className={classnames({ 'isload': isLoad })}
-       />
-      }
+      {isInView && (
+        <Img src={src} onLoad={handleOnload} className={classnames({ isload: isLoad })} />
+      )}
     </StyledImage>
   )
 }
-
 
 export default Image

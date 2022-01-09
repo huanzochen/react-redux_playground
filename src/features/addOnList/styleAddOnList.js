@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledAddOnList = styled.div`
   display: flex;
@@ -7,4 +7,4 @@ export const StyledAddOnList = styled.div`
   & > div {
     margin: 0 10px 0 0;
   }
-`;
+`

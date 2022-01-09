@@ -4,23 +4,17 @@ import ItemContext from '.'
 
 import { initialData, location, serverSide } from '../mockData'
 
-
 import { get } from 'lodash'
 // https://segmentfault.com/a/1190000015605531
 
 const ItemContextProvider = ({ children }) => {
-
   const getContextValue = () => {
     return {
-      ...initialData.data
+      ...initialData.data,
     }
   }
 
-  return (
-    <ItemContext.Provider value={getContextValue()}>
-      {children}
-    </ItemContext.Provider>
-  )
+  return <ItemContext.Provider value={getContextValue()}>{children}</ItemContext.Provider>
 }
 
 ItemContextProvider.propTypes = {
@@ -28,7 +22,7 @@ ItemContextProvider.propTypes = {
   // initialData: PropTypes.object.isRequired,
   initialData: PropTypes.object,
   // client: PropTypes.object.isRequired
-  client: PropTypes.object
+  client: PropTypes.object,
 }
 
 export default ItemContextProvider

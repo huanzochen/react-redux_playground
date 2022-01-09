@@ -5,7 +5,7 @@ import styles from './row.module.scss'
 
 const Row = ({ children, className, noGutters, ...rest }) => {
   const classNames = cx(styles.row, className, {
-    [styles.noGutters]: noGutters
+    [styles.noGutters]: noGutters,
   })
 
   return (
@@ -18,7 +18,7 @@ const Row = ({ children, className, noGutters, ...rest }) => {
 Row.propTypes = {
   noGutters: PropTypes.bool,
   className: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 export default Row

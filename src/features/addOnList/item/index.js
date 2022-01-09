@@ -1,18 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import ItemPrice from "./itemPrice";
-import Review from "./review";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import ItemPrice from './itemPrice'
+import Review from './review'
 
-import {
-  StyledItem,
-  StyledItemImg,
-  StyledItemDescription,
-  StyledBuyButton,
-} from "./styleItem";
+import { StyledItem, StyledItemImg, StyledItemDescription, StyledBuyButton } from './styleItem'
 
 const Item = ({ data }) => {
-  const { imageUrl, title, discountPrice, price, reviewStars, reviewCount } =
-    data;
+  const { imageUrl, title, discountPrice, price, reviewStars, reviewCount } = data
 
   return (
     <StyledItem>
@@ -27,7 +21,7 @@ const Item = ({ data }) => {
         </StyledBuyButton>
       </StyledItemDescription>
     </StyledItem>
-  );
-};
+  )
+}
 
-export default Item;
+export default Item

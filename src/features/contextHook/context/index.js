@@ -1,19 +1,17 @@
-import { createContext, useContext } from "react";
-import ItemContextProvider from "./provider";
+import { createContext, useContext } from 'react'
+import ItemContextProvider from './provider'
 
-const ItemContext = createContext();
+const ItemContext = createContext()
 const useItemCtx = () => {
-  const contextValue = useContext(ItemContext);
+  const contextValue = useContext(ItemContext)
 
-  if (process.env.NODE_ENV === "production" && !contextValue) {
+  if (process.env.NODE_ENV === 'production' && !contextValue) {
     // eslint-disable-next-line no-console
-    console.error(
-      "You should use useItemCtx inside the <ItemContext.Provider>"
-    );
+    console.error('You should use useItemCtx inside the <ItemContext.Provider>')
   }
-  return contextValue;
-};
+  return contextValue
+}
 
-export { ItemContextProvider, useItemCtx };
+export { ItemContextProvider, useItemCtx }
 
-export default ItemContext;
+export default ItemContext

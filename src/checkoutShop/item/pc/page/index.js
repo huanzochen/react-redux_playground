@@ -1,4 +1,3 @@
-
 import { useItemCtx } from '../../shared/context'
 
 import MainPage from './mainPage'
@@ -15,9 +14,9 @@ const ItemPage = () => {
 
   return (
     <>
-      <MainPage/>
+      <MainPage />
     </>
-  ) 
+  )
 }
 
 export default ItemPage

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledItemPrice = styled.div`
   & span {
@@ -26,4 +26,4 @@ export const StyledItemPrice = styled.div`
       font-size: 10px;
     }
   }
-`;
+`

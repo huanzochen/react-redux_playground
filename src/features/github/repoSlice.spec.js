@@ -1,7 +1,7 @@
 import GitHub from './GitHub'
 import Enzyme, { shallow, mount } from 'enzyme'
 
-import repoReducer, { 
+import repoReducer, {
   fetchRepos,
   selectAll,
   selectAllRepos,
@@ -12,7 +12,7 @@ import repoReducer, {
 describe('<GitHub />', () => {
   const initialState = {
     repoStatus: 'idle',
-    error: 'null'
+    error: 'null',
   }
 
   test('repoSlice reducer', () => {
@@ -20,7 +20,7 @@ describe('<GitHub />', () => {
       repoStatus: 'idle',
       error: 'null',
       entities: {},
-      ids: []
+      ids: [],
     })
   })
 
@@ -28,5 +28,4 @@ describe('<GitHub />', () => {
   //   const actual = repoReducer(initialState, fetchRepos())
   //   expect(actual.ids).toBeGreaterThan(1)
   // })
-
 })

@@ -3,26 +3,20 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 function throttle(func, delay) {
   let timeout = null
   let inThrottle = false
-  return function() {
+  return function () {
     let context = this
     let args = arguments
     if (!inThrottle) {
       inThrottle = true
       func.apply(context, args)
-      timeout = setTimeout(function() {
+      timeout = setTimeout(function () {
         inThrottle = false
       }, delay)
     }
   }
 }
 
-function InfiniteScroll({
-  dataLength,
-  next,
-  hasMore,
-  loader,
-  children
-}) {
+function InfiniteScroll({ dataLength, next, hasMore, loader, children }) {
   const refDiv = useRef()
   let [isLoading, setIsLoading] = useState(false)
   let [checkDataLenth, setCheckDataLenth] = useState(dataLength)
@@ -33,7 +27,7 @@ function InfiniteScroll({
     console.log(renderCount.current)
   })
 
-  const isBottom = (ref) => { 
+  const isBottom = (ref) => {
     if (!ref.current) {
       return false
     }
@@ -43,20 +37,23 @@ function InfiniteScroll({
 
   // 被綁定 ref 的該原生 DOM 是否已經觸底.
 
-  const onScroll = useCallback((e) => {
-    console.log('scrolling...')
-    console.log(hasMore, isBottom(refDiv))
-    // console.log(e)
-    if (hasMore && isBottom(refDiv)) {
-      console.log('正在仔入內容...')
-      next()
-      setIsLoading(true)
-    }
-  }, [hasMore, next])
+  const onScroll = useCallback(
+    (e) => {
+      console.log('scrolling...')
+      console.log(hasMore, isBottom(refDiv))
+      // console.log(e)
+      if (hasMore && isBottom(refDiv)) {
+        console.log('正在仔入內容...')
+        next()
+        setIsLoading(true)
+      }
+    },
+    [hasMore, next]
+  )
 
-  const throttleChangedHandler = useMemo(() => { return throttle(onScroll, 700) }
-    , [onScroll])
-
+  const throttleChangedHandler = useMemo(() => {
+    return throttle(onScroll, 700)
+  }, [onScroll])
 
   useEffect(() => {
     document.addEventListener('scroll', throttleChangedHandler)
@@ -71,15 +68,12 @@ function InfiniteScroll({
     }
   }, [checkDataLenth, dataLength])
 
-
-
   return (
     <div ref={refDiv}>
       {children}
       {isLoading ? loader : ''}
     </div>
   )
-
 }
 
 export default InfiniteScroll

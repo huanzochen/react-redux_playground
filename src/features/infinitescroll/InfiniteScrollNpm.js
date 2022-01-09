@@ -2,29 +2,27 @@ import React, { useState, useEffect } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { 
+import {
   getFakeData,
-  selectDataIds,  
+  selectDataIds,
   selectDataIdsPart,
   selectDataById,
-  nextPage
+  nextPage,
 } from './infinitescrollSlice'
 
-
 /**
- * 
- * @returns 
- * 
+ *
+ * @returns
+ *
  * 這個範例使用了 react-infinite-scroll-component 套件, 看看人家是怎麼做的
  */
-
 
 function InfiniteScrollNpm() {
   const dispatch = useDispatch()
   const [hasMoreData, setHasMoreData] = useState(false)
-  const fakeDataStatus = useSelector(state => state.infinitescrolls.status)
+  const fakeDataStatus = useSelector((state) => state.infinitescrolls.status)
   const dataIds = useSelector(selectDataIds)
-  const pagination = useSelector(state => state.infinitescrolls.pagination)
+  const pagination = useSelector((state) => state.infinitescrolls.pagination)
   const dataIdsPart = useSelector((state) => selectDataIdsPart(state, pagination))
 
   const fetchMoreData = () => {
@@ -32,7 +30,7 @@ function InfiniteScrollNpm() {
   }
 
   let Repo = ({ dataId }) => {
-    const data = useSelector(state => selectDataById(state, dataId))
+    const data = useSelector((state) => selectDataById(state, dataId))
     return (
       <div>
         <div>{data.id}</div>
@@ -41,12 +39,11 @@ function InfiniteScrollNpm() {
       </div>
     )
   }
-  
+
   useEffect(() => {
     if (dataIds.length > dataIdsPart.length) {
       setHasMoreData(true)
-    }
-    else {
+    } else {
       setHasMoreData(false)
     }
   }, [dataIds.length, dataIdsPart.length])
@@ -70,9 +67,7 @@ function InfiniteScrollNpm() {
         loader={<h4>Loading...</h4>}
       >
         {dataIdsPart.map((dataId, index) => {
-          return (
-            <Repo key={index} dataId={dataId}></Repo>
-          )
+          return <Repo key={index} dataId={dataId}></Repo>
         })}
       </InfiniteScroll>
     </div>

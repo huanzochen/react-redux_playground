@@ -10,13 +10,8 @@ import { reducer, initialState } from './reducer'
 
 import useIntegrateInitialQueryData from 'hooks/graphql/useIntegrateInitialQueryData'
 
-const {
-  SHIPPING_METHOD,
-  USE_RAKUTEN_POINT,
-  USE_COUPON,
-  HANDLE_ERROR_SHOW,
-  HANDLE_ERROR_REMOVE
-} = ACTION_TYPES
+const { SHIPPING_METHOD, USE_RAKUTEN_POINT, USE_COUPON, HANDLE_ERROR_SHOW, HANDLE_ERROR_REMOVE } =
+  ACTION_TYPES
 
 const PaymentContextProvider = ({ children, initalData }) => {
   const { data, loading, error, refetch } = useIntegrateInitialQueryData(
@@ -27,26 +22,26 @@ const PaymentContextProvider = ({ children, initalData }) => {
   )
 
   const [state, dispatch] = useReducer(reducer, {
-    ...initialState
+    ...initialState,
   })
 
   const handleErrorShow = (errorMessage) => {
     dispatch({
       type: HANDLE_ERROR_SHOW,
-      payload: { errorMessage }
+      payload: { errorMessage },
     })
   }
-  
+
   const handleErrorRemove = () => {
     dispatch({
-      type: HANDLE_ERROR_REMOVE
+      type: HANDLE_ERROR_REMOVE,
     })
   }
 
   const useRakutenPoint = (pointNumber) => {
     dispatch({
       type: USE_RAKUTEN_POINT,
-      payload: { pointNumber }
+      payload: { pointNumber },
     })
   }
 
@@ -58,8 +53,8 @@ const PaymentContextProvider = ({ children, initalData }) => {
       actions: {
         handleErrorShow,
         handleErrorRemove,
-        useRakutenPoint
-      }
+        useRakutenPoint,
+      },
     }
   }
   return <PaymentContext.Provider value={getContextValue()}>{children}</PaymentContext.Provider>

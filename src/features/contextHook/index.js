@@ -1,7 +1,7 @@
-import React from "react";
-import MainPage from "./mainPage";
+import React from 'react'
+import MainPage from './mainPage'
 
-import ContextHookWrapper from "./contextHookWrapper";
+import ContextHookWrapper from './contextHookWrapper'
 
 const ContextHook = () => {
   return (
@@ -11,7 +11,7 @@ const ContextHook = () => {
         <MainPage />
       </ContextHookWrapper>
     </div>
-  );
-};
+  )
+}
 
-export default ContextHook;
+export default ContextHook

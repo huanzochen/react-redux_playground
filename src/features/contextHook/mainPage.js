@@ -1,7 +1,7 @@
-import { useItemCtx } from "./context";
+import { useItemCtx } from './context'
 
 const MainPage = () => {
-  const { sandra, tommy } = useItemCtx();
+  const { sandra, tommy } = useItemCtx()
   return (
     <>
       <h3>MainPage</h3>
@@ -17,7 +17,7 @@ const MainPage = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default MainPage;
+export default MainPage

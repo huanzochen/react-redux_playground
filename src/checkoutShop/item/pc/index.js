@@ -1,18 +1,14 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 
-import PropTypes from "prop-types";
-import ItemPageWrapper from "../shared/itemPageWrapper";
+import PropTypes from 'prop-types'
+import ItemPageWrapper from '../shared/itemPageWrapper'
 
-import ItemPage from "./page";
+import ItemPage from './page'
 
 const ItemPagePC = ({ initialData, location, serverSide }) => {
   return (
-    <ItemPageWrapper
-      initialData={initialData}
-      location={location}
-      serverSide={serverSide}
-    >
+    <ItemPageWrapper initialData={initialData} location={location} serverSide={serverSide}>
       {/* <Switch>
         <Route>
 
@@ -21,19 +17,19 @@ const ItemPagePC = ({ initialData, location, serverSide }) => {
 
       <ItemPage />
     </ItemPageWrapper>
-  );
-};
+  )
+}
 
 ItemPagePC.defaultProps = {
-  location: "",
+  location: '',
   serverSide: false,
-};
+}
 
 ItemPagePC.propTypes = {
   // initialData: PropTypes.object.isRequired,
   initialData: PropTypes.object,
   location: PropTypes.string,
   severSide: PropTypes.bool,
-};
+}
 
-export default ItemPagePC;
+export default ItemPagePC

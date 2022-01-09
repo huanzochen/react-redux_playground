@@ -13,8 +13,5 @@ const useItemCtx = () => {
   return contextValue
 }
 
-export { 
-  ItemContextProvider,
-  useItemCtx
-}
+export { ItemContextProvider, useItemCtx }
 export default ItemContext

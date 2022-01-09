@@ -2,25 +2,25 @@ import React, { useState, useEffect, useRef } from 'react'
 import { nanoid, unwrapResult } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { 
-  getFakeData, 
-  selectDataIds, 
+import {
+  getFakeData,
+  selectDataIds,
   selectDataIdsPart,
   selectDataById,
-  nextPage
+  nextPage,
 } from './infinitescrollSlice'
 
 /**
- * 
- * @returns 
- * 
- * 這個範例演示了 infinite scroll 
+ *
+ * @returns
+ *
+ * 這個範例演示了 infinite scroll
  * 參考至 https://typeofnan.dev/creating-a-react-infinite-scroll-component/
  * 利用在 div (原生地 DOM) 宣告 ref 來抓取元素的個別數值, 取得他的 bottom 來實作偵測元素底部實現 無限捲動載入的功能.
  */
 
 let Repo = ({ dataId }) => {
-  const data = useSelector(state => selectDataById(state, dataId))
+  const data = useSelector((state) => selectDataById(state, dataId))
   return (
     <div>
       <div>{data.id}</div>
@@ -33,25 +33,23 @@ let Repo = ({ dataId }) => {
 function HandMadeInfiniteScroll() {
   const refDiv = React.useRef()
   const dispatch = useDispatch()
-  const fakeDataStatus = useSelector(state => state.infinitescrolls.status)
+  const fakeDataStatus = useSelector((state) => state.infinitescrolls.status)
   const dataIds = useSelector(selectDataIds)
-  const pagination = useSelector(state => state.infinitescrolls.pagination)
+  const pagination = useSelector((state) => state.infinitescrolls.pagination)
   const dataIdsPart = useSelector((state) => selectDataIdsPart(state, pagination))
 
   const [hasMoreData, setHasMoreData] = useState(false)
-  
 
   useEffect(() => {
     if (dataIds.length > dataIdsPart.length) {
       setHasMoreData(true)
-    }
-    else {
+    } else {
       setHasMoreData(false)
     }
   }, [dataIds.length, dataIdsPart.length])
 
   // 被綁定 ref 的該原生 DOM 是否已經觸底.
-  function isBottom(ref) { 
+  function isBottom(ref) {
     if (!ref.current) {
       return false
     }
@@ -79,21 +77,14 @@ function HandMadeInfiniteScroll() {
     initial()
   })
 
-  let content 
+  let content
   if (fakeDataStatus === 'loading') {
     content = <div> loading </div>
-  }
-  else if (fakeDataStatus === 'succeeded') {
-    content = dataIdsPart.map(dataId => 
-      <Repo key={dataId} dataId={dataId}></Repo>
-    )
+  } else if (fakeDataStatus === 'succeeded') {
+    content = dataIdsPart.map((dataId) => <Repo key={dataId} dataId={dataId}></Repo>)
   }
 
-  return (
-    <div ref={refDiv}>
-      {content}
-    </div>
-  )
+  return <div ref={refDiv}>{content}</div>
 }
 
 export default HandMadeInfiniteScroll
@@ -101,6 +92,6 @@ export default HandMadeInfiniteScroll
 /**
  * https://developer.mozilla.org/zh-TW/docs/Web/API/Document/scroll_event
  * https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
- * 
- * 
+ *
+ *
  */

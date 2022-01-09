@@ -12,7 +12,7 @@ const ItemPageWrapper = ({ initialData, children, location, serverSide }) => {
     <div>
       <ItemContextProvider initialData={initialData}>
         <Router location={location} serverSide={serverSide}>
-          { children }
+          {children}
         </Router>
       </ItemContextProvider>
     </div>
@@ -22,7 +22,7 @@ const ItemPageWrapper = ({ initialData, children, location, serverSide }) => {
 
 ItemPageWrapper.defaultProps = {
   location: '',
-  serverSide: false
+  serverSide: false,
 }
 
 ItemPageWrapper.propTypes = {
@@ -30,7 +30,7 @@ ItemPageWrapper.propTypes = {
   initialData: PropTypes.object,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.element]),
   location: PropTypes.string,
-  serverSide: PropTypes.bool
+  serverSide: PropTypes.bool,
 }
 
 export default ItemPageWrapper

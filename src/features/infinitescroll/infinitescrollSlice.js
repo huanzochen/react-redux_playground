@@ -1,21 +1,26 @@
-import { createSlice, createEntityAdapter, createAsyncThunk, createSelector } from '@reduxjs/toolkit'
+import {
+  createSlice,
+  createEntityAdapter,
+  createAsyncThunk,
+  createSelector,
+} from '@reduxjs/toolkit'
 import { mycounterSlice } from '../mycounter/mycounterSlice'
 
 const fakeDataAdapter = createEntityAdapter()
 
 const initialState = fakeDataAdapter.getInitialState({
   status: 'idle',
-  pagination: 1
+  pagination: 1,
 })
 
-export const getFakeData = createAsyncThunk('infinitescroll/get', async() => {
+export const getFakeData = createAsyncThunk('infinitescroll/get', async () => {
   let headersList = {
-    'Accept': 'application/vnd.github.v3+json',
-    'User-Agent': 'Thunder Client (https://www.thunderclient.io)'
+    Accept: 'application/vnd.github.v3+json',
+    'User-Agent': 'Thunder Client (https://www.thunderclient.io)',
   }
-  const response = await fetch('https://api.github.com/users/huanzochen/repos?sort=pushed', { 
+  const response = await fetch('https://api.github.com/users/huanzochen/repos?sort=pushed', {
     method: 'GET',
-    headers: headersList
+    headers: headersList,
   })
   return await response.json()
 })
@@ -27,8 +32,8 @@ export const infinitescrollSlice = createSlice({
     nextPage: {
       reducer(state, action) {
         state.pagination++
-      }
-    }
+      },
+    },
   },
   extraReducers: {
     [getFakeData.pending]: (state, action) => {
@@ -41,21 +46,19 @@ export const infinitescrollSlice = createSlice({
     [getFakeData.rejected]: (state, action) => {
       state.status = 'failed'
       console.log(action.error.message)
-    }
-  }
+    },
+  },
 })
 
 export const { nextPage, moreData, noData } = infinitescrollSlice.actions
 
 export default infinitescrollSlice.reducer
 
-export const {
-  selectIds: selectDataIds,
-  selectById: selectDataById
-} = fakeDataAdapter.getSelectors(state => state.infinitescrolls)
+export const { selectIds: selectDataIds, selectById: selectDataById } =
+  fakeDataAdapter.getSelectors((state) => state.infinitescrolls)
 
 export const selectDataIdsPart = createSelector(
-  selectDataIds, 
+  selectDataIds,
   (state, pagination) => pagination,
   (dataIds, pagination) => {
     return dataIds.slice(0, pagination * 8)

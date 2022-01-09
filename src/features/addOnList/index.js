@@ -1,16 +1,16 @@
-import { items } from "./mockData";
-import Item from "./item";
+import { items } from './mockData'
+import Item from './item'
 
-import { StyledAddOnList } from "./styleAddOnList";
+import { StyledAddOnList } from './styleAddOnList'
 
 const AddOnList = () => {
-  let content = "";
+  let content = ''
 
   content = items.map((item) => {
-    return <Item data={item} key={item.title}></Item>;
-  });
+    return <Item data={item} key={item.title}></Item>
+  })
 
-  return <StyledAddOnList>{content}</StyledAddOnList>;
-};
+  return <StyledAddOnList>{content}</StyledAddOnList>
+}
 
-export default AddOnList;
+export default AddOnList

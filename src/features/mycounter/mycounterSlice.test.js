@@ -1,8 +1,4 @@
-import mycounterReducer, {
-  decrement,
-  increment,
-} from './mycounterSlice'
-
+import mycounterReducer, { decrement, increment } from './mycounterSlice'
 
 describe('mycounter reducer', () => {
   const initialState = {
@@ -25,6 +21,4 @@ describe('mycounter reducer', () => {
     const actual = mycounterReducer(initialState, decrement())
     expect(actual.value).toEqual(4)
   })
-
-
 })

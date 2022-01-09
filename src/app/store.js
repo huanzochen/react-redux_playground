@@ -9,6 +9,6 @@ export const store = configureStore({
     counter: counterReducer,
     mycounter: mycounterReducer,
     repos: repoReducer,
-    infinitescrolls: infinitescrollsReducer
+    infinitescrolls: infinitescrollsReducer,
   },
 })

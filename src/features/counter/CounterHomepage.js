@@ -7,7 +7,7 @@ function CounterHomepage() {
       <img src={logo} className="App-logo" alt="logo" />
       <Counter></Counter>
       <p>
-          Edit <code>src/App.js</code> and save to reload.
+        Edit <code>src/App.js</code> and save to reload.
       </p>
       <span>
         <span>Learn </span>
@@ -17,7 +17,7 @@ function CounterHomepage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-            React
+          React
         </a>
         <span>, </span>
         <a
@@ -26,7 +26,7 @@ function CounterHomepage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-            Redux
+          Redux
         </a>
         <span>, </span>
         <a
@@ -35,16 +35,16 @@ function CounterHomepage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-            Redux Toolkit
+          Redux Toolkit
         </a>
-          ,<span> and </span>
+        ,<span> and </span>
         <a
           className="App-link"
           href="https://react-redux.js.org/"
           target="_blank"
           rel="noopener noreferrer"
         >
-            React Redux
+          React Redux
         </a>
       </span>
     </div>

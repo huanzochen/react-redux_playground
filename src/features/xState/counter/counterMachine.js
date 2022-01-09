@@ -1,24 +1,24 @@
-import { createMachine, withContext, assign } from "xstate";
+import { createMachine, withContext, assign } from 'xstate'
 
 export const COUNTER_EVENTS = {
-  INCREMENT: "INCREMENT",
-  DYNAMIC_INCREMENT: "DYNAMIC_INCREMENT",
-  RESET: "RESET",
-  DISABLE: "DISABLE",
-  ENABLE: "ENABLE",
-};
+  INCREMENT: 'INCREMENT',
+  DYNAMIC_INCREMENT: 'DYNAMIC_INCREMENT',
+  RESET: 'RESET',
+  DISABLE: 'DISABLE',
+  ENABLE: 'ENABLE',
+}
 
 export const COUNTER_STATES = {
-  root: "counter",
+  root: 'counter',
   counter: {
-    enabled: "enabled",
-    disabled: "disabled",
+    enabled: 'enabled',
+    disabled: 'disabled',
   },
-};
+}
 
 const counterMachine = createMachine(
   {
-    id: "counter",
+    id: 'counter',
     initial: COUNTER_STATES.counter.enabled,
     context: {
       count: 1,
@@ -30,13 +30,13 @@ const counterMachine = createMachine(
       [COUNTER_STATES.counter.enabled]: {
         on: {
           [COUNTER_EVENTS.INCREMENT]: {
-            actions: ["increment"],
+            actions: ['increment'],
           },
           [COUNTER_EVENTS.DYNAMIC_INCREMENT]: {
-            actions: ["dynamic_increment"],
+            actions: ['dynamic_increment'],
           },
           [COUNTER_EVENTS.RESET]: {
-            actions: ["reset"],
+            actions: ['reset'],
           },
           [COUNTER_EVENTS.DISABLE]: {
             target: COUNTER_STATES.counter.disabled,
@@ -57,7 +57,7 @@ const counterMachine = createMachine(
       increment: assign((context, event) => {
         return {
           count: context.count + 1,
-        };
+        }
       }),
       dynamic_increment: assign({
         count: (context, event) => context.count + (event.value || 0),
@@ -65,10 +65,10 @@ const counterMachine = createMachine(
       reset: assign(() => {
         return {
           count: 1,
-        };
+        }
       }),
     },
   }
-);
+)
 
-export default counterMachine;
+export default counterMachine

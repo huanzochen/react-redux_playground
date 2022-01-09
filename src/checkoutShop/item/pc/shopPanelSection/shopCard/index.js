@@ -1,14 +1,14 @@
-import { useItemCtx } from "../../../shared/context";
-import Badge from "../badge";
+import { useItemCtx } from '../../../shared/context'
+import Badge from '../badge'
 
-import { filterEnabledBadges } from "../../../../utils/item";
-import { isNotEmptyArray } from "../../../../utils/common/base";
+import { filterEnabledBadges } from '../../../../utils/item'
+import { isNotEmptyArray } from '../../../../utils/common/base'
 
-import { lineClampStyle } from "../../../../utils/common/style";
+import { lineClampStyle } from '../../../../utils/common/style'
 
-import styles from "./shopCard.module.scss";
+import styles from './shopCard.module.scss'
 
-const MAX_BADGE_COUNT = 3;
+const MAX_BADGE_COUNT = 3
 
 const ShopCard = () => {
   const {
@@ -24,11 +24,11 @@ const ShopCard = () => {
       },
     },
     // pageDesignFields: { shopImageUrl },
-  } = useItemCtx();
+  } = useItemCtx()
 
-  const enabledBadges = filterEnabledBadges(badges).slice(0, MAX_BADGE_COUNT);
+  const enabledBadges = filterEnabledBadges(badges).slice(0, MAX_BADGE_COUNT)
 
-  console.log(isInquiryAccepted, shopId, shopUrl, badges);
+  console.log(isInquiryAccepted, shopId, shopUrl, badges)
 
   return (
     <div className={styles.container}>
@@ -61,7 +61,7 @@ const ShopCard = () => {
         {/* {isInquiryAccepted && <ShopContact shopUrl={shopUrl} */}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ShopCard;
+export default ShopCard

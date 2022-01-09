@@ -5,7 +5,7 @@ export const StyledImage = styled.div`
   overflow: hidden;
   max-width: 800px;
   margin: 20px auto;
-  padding-bottom: ${props => props.height / props.width * 100}%;
+  padding-bottom: ${(props) => (props.height / props.width) * 100}%;
   width: 100%;
   background-color: #ccc;
 `
@@ -15,14 +15,7 @@ export const Mockup = styled.div`
   width: 100%;
   height: 100%;
   opacity: 1;
-  background: linear-gradient(
-      90deg,
-      #e66465c1,
-      #e66465d1,
-      #9198e5e1,
-      #e66465e1,
-      #e66465f1
-      );
+  background: linear-gradient(90deg, #e66465c1, #e66465d1, #9198e5e1, #e66465e1, #e66465f1);
   background-size: 400% 200%;
   background-repeat: repeat;
 
@@ -35,7 +28,7 @@ export const Mockup = styled.div`
     }
   }
 
-  &.loading{
+  &.loading {
     animation-name: loading;
     animation-timing-function: ease;
     animation-duration: 1.5s;
@@ -52,7 +45,7 @@ export const Img = styled.img`
 
   transition: opacity 1.2s ease;
 
-  &.isload{
-    opacity: 1; 
+  &.isload {
+    opacity: 1;
   }
 `

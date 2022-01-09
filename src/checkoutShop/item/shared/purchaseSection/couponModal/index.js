@@ -1,5 +1,5 @@
 const CouponModal = () => {
-  return <div>CouponModal</div>;
-};
+  return <div>CouponModal</div>
+}
 
-export default CouponModal;
+export default CouponModal

@@ -8,16 +8,14 @@ const Column = ({ children, noGutters, size, className }) => {
     [styles.noGutters]: noGutters,
   })
 
-  return <div className={classNames}>
-    {children}
-  </div>
+  return <div className={classNames}>{children}</div>
 }
 
 Column.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  size: PropTypes.number, 
-  noGutter: PropTypes.bool
+  size: PropTypes.number,
+  noGutter: PropTypes.bool,
 }
 
 export default Column

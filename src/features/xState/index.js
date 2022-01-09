@@ -1,8 +1,8 @@
-import CounterUseInterpret from "./counterUseInterpret";
-import Counter from "./counter";
-import Light from "./light";
+import CounterUseInterpret from './counterUseInterpret'
+import Counter from './counter'
+import Light from './light'
 
-import styles from "./xState.module.scss";
+import styles from './xState.module.scss'
 
 const XState = () => {
   return (
@@ -14,7 +14,7 @@ const XState = () => {
         <Light />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default XState;
+export default XState
