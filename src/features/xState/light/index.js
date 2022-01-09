@@ -1,5 +1,4 @@
 import { interpret } from "xstate";
-import { inspect } from "@xstate/inspect";
 import { useMachine } from "@xstate/react";
 
 import cx from "classnames";

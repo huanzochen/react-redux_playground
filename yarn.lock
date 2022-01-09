@@ -2490,10 +2490,10 @@
   dependencies:
     tslib "^1.9.3"
 
-"@xstate/inspect@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@xstate/inspect/-/inspect-0.3.0.tgz#f7e556b23d1527dad79ab27245db8ad19fd0f5d2"
-  integrity sha512-XJaHLyKMFaFy/5UWah0agawd57wnXn27fUqWCvLgJocroGi/960vuIvFjKZyqji7iS0e/foCAyI6060rSaxaaw==
+"@xstate/inspect@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@xstate/inspect/-/inspect-0.6.0.tgz#a063e7c59c8b525e8f7b760ece694c75b825f669"
+  integrity sha512-MZgcFUurpgrjLzDDb+2KYp8GhSeJ5UtzTDa486x0es0xwCr0MFT9euD1xu0xqYH9b5UFY66LWt7AbMpZjgB+kw==
   dependencies:
     fast-safe-stringify "^2.0.7"
 
