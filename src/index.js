@@ -8,9 +8,9 @@ import * as serviceWorker from './serviceWorker'
 import { CookiesProvider } from 'react-cookie'
 import { inspect } from '@xstate/inspect'
 
-inspect({
-  iframe: false, // open in new window
-})
+// inspect({
+//   iframe: false, // open in new window
+// })
 
 ReactDOM.render(
   <React.StrictMode>

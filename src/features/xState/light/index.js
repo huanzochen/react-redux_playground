@@ -30,7 +30,7 @@ const Light = () => {
   // console.log(state3.matches("green"));
   // console.log('stateBroken.matches("black"):', stateBroken.matches("black"));
 
-  const [light, sendLight] = useMachine(lightMachine, { devtools: true })
+  const [light, sendLight] = useMachine(lightMachine, { devtools: false })
   console.log('light:', light)
   // console.log("light.context", light.context);
   // console.log("light.value:", light.value);

@@ -17,7 +17,7 @@ const CounterUseInterpret = () => {
   const service = useInterpret(
     counterMachine,
     {
-      devTools: true,
+      devTools: false,
     },
     (state) => {
       // observerble function 目前還不知道用途為何

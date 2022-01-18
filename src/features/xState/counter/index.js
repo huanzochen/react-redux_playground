@@ -8,7 +8,7 @@ import styles from './counter.module.scss'
 
 const Counter = () => {
   const [counter, sendCounter] = useMachine(counterMachine, {
-    devtools: true,
+    devtools: false,
   })
 
   const [count, setCount] = useState(0)
