@@ -1,0 +1,37 @@
+.parent {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(245, 153, 153);
+}
+
+.ellipsis_box {
+  display: flex;
+  max-width: 60%;
+  padding: 100px 200px;
+
+  .label {
+    display: inline;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.test {
+  width: 120px;
+  background-color: rosybrown;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 10%;
+}
+
+.a_ellipsis {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

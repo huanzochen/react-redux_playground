@@ -17,6 +17,7 @@ import ReducerCounter from './features/reducerCounter'
 import ApolloPlayground from './features/apolloPlayground'
 import AddOnList from './features/addOnList'
 import XState from './features/xState'
+import Ellipsis from './features/ellipsis'
 
 import ItemPagePC from './checkoutShop/item/pc'
 
@@ -63,8 +64,11 @@ function App() {
           <Route path="/add-on-list">
             <AddOnList />
           </Route>
-          <Route>
+          <Route path="/xstate">
             <XState />
+          </Route>
+          <Route path="/ellipsis">
+            <Ellipsis />
           </Route>
           {/* </Wrapper> */}
         </Switch>

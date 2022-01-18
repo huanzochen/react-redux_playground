@@ -25,6 +25,7 @@ function Home() {
         <Link to="/apollo_playground">ApolloPlayground</Link>
         <Link to="/add-on-list">AddOnList</Link>
         <Link to="/xstate">XState</Link>
+        <Link to="/ellipsis">Ellipsis</Link>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>
