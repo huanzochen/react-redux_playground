@@ -16,6 +16,12 @@ export const COUNTER_STATES = {
   },
 }
 
+export const GUARD = {
+  event: {
+    isValuePositive: 'isValuePositive',
+  },
+}
+
 const counterMachine = createMachine(
   {
     id: 'counter',
@@ -33,6 +39,7 @@ const counterMachine = createMachine(
             actions: ['increment'],
           },
           [COUNTER_EVENTS.DYNAMIC_INCREMENT]: {
+            cond: GUARD.event.isValuePositive,
             actions: ['dynamic_increment'],
           },
           [COUNTER_EVENTS.RESET]: {
@@ -67,6 +74,9 @@ const counterMachine = createMachine(
           count: 1,
         }
       }),
+    },
+    guards: {
+      [GUARD.event.isValuePositive]: (context, event, condMeta) => event.value > 0,
     },
   }
 )

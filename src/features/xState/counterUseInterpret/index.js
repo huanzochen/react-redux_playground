@@ -72,8 +72,8 @@ const CounterUseInterpret = () => {
     <div className={styles.container}>
       <span>Counter UseInterpret</span>
       <div className={cx(styles.counterSection, { [styles.grey]: isDISABLED })}>
-        <input value={count} onChange={handleCountOnchange} type="number" />
         {countContext}
+        <input value={count} onChange={handleCountOnchange} type="number" />
         <button onClick={handleAddOne}> add 1 </button>
         <button onClick={handleAddCustom}> add custom </button>
         <button onClick={handleReset}> reset </button>
@@ -82,6 +82,8 @@ const CounterUseInterpret = () => {
       <button onClick={handleEnable}> Enable </button>
       <div>
         <span>如果 按鈕已經 disable, 那就不能進行加減等的動作．</span>
+        <br />
+        <span>not enabled to add minus value, minus validate will be add to GUARD</span>
       </div>
     </div>
   )

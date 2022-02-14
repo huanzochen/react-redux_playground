@@ -58,8 +58,8 @@ const Counter = () => {
     <div className={styles.container}>
       <span>counter</span>
       <div className={cx(styles.counterSection, { [styles.grey]: isDISABLED })}>
-        <input value={count} onChange={handleCountOnchange} type="number" />
         {counter.context.count}
+        <input value={count} onChange={handleCountOnchange} type="number" />
         <button onClick={handleAddOne}> add 1 </button>
         <button onClick={handleAddCustom}> add custom </button>
         <button onClick={handleReset}> reset </button>
