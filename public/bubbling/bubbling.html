@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .a {
+      padding: 10px;
+      background-color: red;
+    }
+    .b {
+      padding: 10px;
+      background-color: blue;
+    }
+    .c {
+      padding: 10px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="A" class="a">
+    <div id="B" class="b">
+      <div id="C" class="c">
+        Click Here
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+
+var divs = document.querySelectorAll("div")
+console.log('divs:',divs)
+divs.forEach( e => {
+  e.onclick = e => {
+    // ways to stop event bubbling
+    // https://vsvaibhav2016.medium.com/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e
+    // event.stopPropagation()
+    console.log(e.currentTarget.id)
+  }
+})
+
+
+</script>
+</html>

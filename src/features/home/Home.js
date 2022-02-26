@@ -44,6 +44,7 @@ function Home() {
         <a href="/div3wayscenter/div3wayscenter2.html">div3wayscenter2</a>
         <a href="/div3wayscenter/div3wayscenter3.html">div3wayscenter3</a>
         <a href="/div3wayscenter/div3wayscenter4.html">div3wayscenter4</a>
+        <a href="/bubbling/bubbling.html">bubbling</a>
       </StaticPage>
     </StyledHome>
   )
