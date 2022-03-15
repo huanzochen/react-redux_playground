@@ -26,6 +26,7 @@ function Home() {
         <Link to="/add-on-list">AddOnList</Link>
         <Link to="/xstate">XState</Link>
         <Link to="/ellipsis">Ellipsis</Link>
+        <Link to="/effects">Effects</Link>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>

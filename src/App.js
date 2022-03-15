@@ -18,6 +18,7 @@ import ApolloPlayground from './features/apolloPlayground'
 import AddOnList from './features/addOnList'
 import XState from './features/xState'
 import Ellipsis from './features/ellipsis'
+import Effects from './features/effects'
 
 import ItemPagePC from './checkoutShop/item/pc'
 
@@ -69,6 +70,9 @@ function App() {
           </Route>
           <Route path="/ellipsis">
             <Ellipsis />
+          </Route>
+          <Route path="/effects">
+            <Effects />
           </Route>
           {/* </Wrapper> */}
         </Switch>
