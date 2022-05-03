@@ -46,6 +46,8 @@ function Home() {
         <a href="/div3wayscenter/div3wayscenter3.html">div3wayscenter3</a>
         <a href="/div3wayscenter/div3wayscenter4.html">div3wayscenter4</a>
         <a href="/bubbling/bubbling.html">bubbling</a>
+        <a href="/canvas/beginner/index.html">canvas-beginner</a>
+        <a href="/canvas/confetti_button/index.html">canvas-confetti_button</a>
       </StaticPage>
     </StyledHome>
   )

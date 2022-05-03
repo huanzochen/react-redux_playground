@@ -1,3 +1,8 @@
 {
   "eslint.workingDirectories": ["./src"],
+
+  "liveSassCompile.settings.includeItems": [
+    "./public/**/*.scss"
+  ],
+  // "liveSassCompile.settings.generateMap": false
 }
