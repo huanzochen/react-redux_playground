@@ -48,6 +48,8 @@ function Home() {
         <a href="/bubbling/bubbling.html">bubbling</a>
         <a href="/canvas/beginner/index.html">canvas-beginner</a>
         <a href="/canvas/animations/index.html">canvas-animations</a>
+        <a href="/canvas/animations_2/index.html">canvas-animations_2</a>
+        <a href="/canvas/particles/index.html">canvas-particles</a>
         <a href="/canvas/confetti_button/index.html">canvas-confetti_button</a>
       </StaticPage>
     </StyledHome>
