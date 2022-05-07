@@ -4,7 +4,7 @@ import {
   createAsyncThunk,
   createSelector,
 } from '@reduxjs/toolkit'
-import { mycounterSlice } from '../mycounter/mycounterSlice'
+// import { mycounterSlice } from '../mycounter/mycounterSlice'
 
 const fakeDataAdapter = createEntityAdapter()
 

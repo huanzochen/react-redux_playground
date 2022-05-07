@@ -6,7 +6,7 @@ import { store } from './app/store'
 import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker'
 import { CookiesProvider } from 'react-cookie'
-import { inspect } from '@xstate/inspect'
+// import { inspect } from '@xstate/inspect'
 
 // inspect({
 //   iframe: false, // open in new window

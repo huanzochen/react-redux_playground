@@ -1,5 +1,5 @@
 import gql from 'graphql-tag'
-import { useQuery, useMutation } from '@apollo/react-hooks'
+import { useMutation } from '@apollo/react-hooks'
 
 const ADD_TODO = gql`
   mutation AddTodo($type: String!) {

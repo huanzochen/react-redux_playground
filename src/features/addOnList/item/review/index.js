@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as faFullStar } from '@fortawesome/free-solid-svg-icons'
-import { faStar as faEmptyStar } from '@fortawesome/free-regular-svg-icons'
+// import { faStar as faEmptyStar } from '@fortawesome/free-regular-svg-icons'
 
 import { StyledReview } from './styleReview'
 

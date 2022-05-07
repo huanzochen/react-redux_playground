@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import React, {
+  // useState,
+  useEffect,
+} from 'react'
+// import styled from 'styled-components'
 import { useSelector, useDispatch } from 'react-redux'
 import { unwrapResult } from '@reduxjs/toolkit'
 
-import { fetchRepos, selectAll, selectAllRepos, selectRepoById, selectRepoIds } from './repoSlice'
+import {
+  fetchRepos,
+  //  selectAll, selectAllRepos,
+  selectRepoById,
+  selectRepoIds,
+} from './repoSlice'
 
 let RepoList = ({ repoId }) => {
   const repo = useSelector((state) => selectRepoById(state, repoId))

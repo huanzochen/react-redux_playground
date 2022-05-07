@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, {
+  // useEffect,
+  useState,
+} from 'react'
 import styled from 'styled-components'
 
 const Label = styled.label`
@@ -21,7 +24,7 @@ function EventTargetValue() {
 
   let content
   content = types.map((data) => (
-    <Label key={data} aria-checked={checkData == data ? true : false}>
+    <Label key={data} aria-checked={checkData === data ? true : false}>
       <input
         type="radio"
         name="language"

@@ -1,5 +1,5 @@
 import { useLazyQuery } from '@apollo/react-hooks'
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { GET_DOG_PHOTO } from '../graphqlData/queries/dogs'
 
@@ -15,6 +15,7 @@ const DogPhotoLazyQuery = () => {
     if (data) {
       refetch()
     }
+    // eslint-disable-next-line
   }, [count])
 
   if (loading) return <p>Loading...</p>

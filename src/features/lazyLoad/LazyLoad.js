@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color } from '../../utils/color'
+// import { color } from '../../utils/color'
 
 import Image from './Image'
 import { images } from './mockData'

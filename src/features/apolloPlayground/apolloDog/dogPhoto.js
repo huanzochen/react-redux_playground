@@ -1,4 +1,4 @@
-import { gql } from 'apollo-boost'
+// import { gql } from 'apollo-boost'
 import { useQuery } from '@apollo/react-hooks'
 import PropTypes from 'prop-types'
 

@@ -7,11 +7,11 @@ const Ellipsis = () => {
       display: block 本身就可以做到 ellipsis, 如果 inline 要做到，那他的父親必須是 flex, why?
       <div className={styles.parent}>
         <div className={styles.ellipsis_box}>
-          <a className={styles.label}>
+          {/* <a className={styles.label}>
             one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen
             sixteen seventeen eightteen nineteen twenty twentyone twentytwo twentythree twentyfour
             twentyfive.
-          </a>
+          </a> */}
         </div>
       </div>
       <div className={styles.test}>

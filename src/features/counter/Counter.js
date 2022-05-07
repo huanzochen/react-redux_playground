@@ -4,7 +4,7 @@ import {
   decrement,
   increment,
   incrementByAmount,
-  incrementAsync,
+  // incrementAsync,
   incrementAsync2,
   incrementIfOdd,
   // selectCount,

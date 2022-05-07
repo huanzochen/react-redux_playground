@@ -1,4 +1,4 @@
-import { ITEM_DOM_ID } from '../../../constants/shop/item'
+// import { ITEM_DOM_ID } from '../../../constants/shop/item'
 
 import Grid from '../../shared/layout/grid'
 import Row from '../../shared/layout/row'

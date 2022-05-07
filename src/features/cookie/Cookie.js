@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react'
+// import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { useSelector, useDispatch } from 'react-redux'
+// import { useSelector, useDispatch } from 'react-redux'
 import { useCookies } from 'react-cookie'
-import { formatISO, addMinutes, addSeconds } from 'date-fns'
+import {
+  // formatISO, addMinutes,
+  addSeconds,
+} from 'date-fns'
 
 const StyledCookie = styled.div`
   display: flex;
@@ -28,7 +31,11 @@ const SessionStorageBar = styled.div`
 `
 
 function Cookie() {
-  const [cookies, setCookie, removeCookie] = useCookies(['test'])
+  const [
+    cookies,
+    setCookie,
+    // removeCookie
+  ] = useCookies(['test'])
 
   const handleSetCookieClick = () => {
     const date = addSeconds(new Date(), 20)

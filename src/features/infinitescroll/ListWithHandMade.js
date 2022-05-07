@@ -1,5 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { nanoid, unwrapResult } from '@reduxjs/toolkit'
+import React, {
+  useState,
+  useEffect,
+  //  useRef
+} from 'react'
+// import { nanoid, unwrapResult } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
 import InfiniteScroll from './InfiniteScroll'
 
@@ -20,16 +24,16 @@ import {
  * 利用在 div (原生地 DOM) 宣告 ref 來抓取元素的個別數值, 取得他的 bottom 來實作偵測元素底部實現 無限捲動載入的功能.
  */
 
-let Repo = ({ dataId }) => {
-  const data = useSelector((state) => selectDataById(state, dataId))
-  return (
-    <div>
-      <div>{data.id}</div>
-      <div>{data.name}</div>
-      <div>{data.full_name}</div>
-    </div>
-  )
-}
+// let Repo = ({ dataId }) => {
+//   const data = useSelector((state) => selectDataById(state, dataId))
+//   return (
+//     <div>
+//       <div>{data.id}</div>
+//       <div>{data.name}</div>
+//       <div>{data.full_name}</div>
+//     </div>
+//   )
+// }
 
 function ListWithHandMade() {
   const dispatch = useDispatch()

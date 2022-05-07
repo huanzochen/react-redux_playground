@@ -2,9 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ItemContext from '.'
 
-import { initialData, location, serverSide } from '../mockData'
+import {
+  initialData,
+  //  location, serverSide
+} from '../mockData'
 
-import { get } from 'lodash'
+// import { get } from 'lodash'
 // https://segmentfault.com/a/1190000015605531
 
 const ItemContextProvider = ({ children }) => {

@@ -1,9 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { nanoid, unwrapResult } from '@reduxjs/toolkit'
+import React, {
+  useState,
+  useEffect,
+  // useRef
+} from 'react'
+// import { nanoid, unwrapResult } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
 
 import {
-  getFakeData,
+  // getFakeData,
   selectDataIds,
   selectDataIdsPart,
   selectDataById,
@@ -71,7 +75,7 @@ function HandMadeInfiniteScroll() {
   useEffect(() => {
     async function initial() {
       if (fakeDataStatus === 'idle') {
-        const result = await dispatch(getFakeData())
+        // const result = await dispatch(getFakeData())
       }
     }
     initial()

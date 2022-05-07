@@ -42,5 +42,7 @@ export function useIntersection(element, callback) {
       listenerCallbacks.delete(target)
       observer.unobserve(target)
     }
+
+    // eslint-disable-next-line
   }, [])
 }

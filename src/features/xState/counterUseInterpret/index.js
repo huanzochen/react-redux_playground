@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useInterpret, useSelector, useActor, useMachine } from '@xstate/react'
+import { useInterpret, useSelector, useActor } from '@xstate/react'
 import counterMachine, { COUNTER_EVENTS, COUNTER_STATES } from '../counter/counterMachine'
 
 import cx from 'classnames'
@@ -7,7 +7,7 @@ import cx from 'classnames'
 import styles from '../counter/counter.module.scss'
 
 const selectCount = (state) => state.context.count // 透過 selector 回傳一個 count
-const selectContext = (state) => state.context // 回傳整個 context 的 selector
+// const selectContext = (state) => state.context // 回傳整個 context 的 selector
 
 const CounterUseInterpret = () => {
   // const [counter, sendCounter] = useMachine(counterMachine, {
@@ -29,7 +29,7 @@ const CounterUseInterpret = () => {
   const [counterState, sendCounter] = useActor(service)
 
   const countContext = useSelector(service, selectCount) // 透過 selector 回傳一個 count
-  const allContext = useSelector(service, selectContext) // 透過 selector 回傳整個 context
+  // const allContext = useSelector(service, selectContext) // 透過 selector 回傳整個 context
 
   console.log('selectCount countContext', countContext)
   console.log('counterState:', counterState)

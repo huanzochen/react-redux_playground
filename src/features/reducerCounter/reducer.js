@@ -3,7 +3,10 @@ export const initialState = {
 }
 
 export const reducer = (state, action) => {
-  const { type, payload } = action
+  const {
+    type,
+    //  payload
+  } = action
   switch (type) {
     case 'increment':
       return { count: state.count + 1 }

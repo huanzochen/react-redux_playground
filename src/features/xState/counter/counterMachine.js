@@ -1,4 +1,4 @@
-import { createMachine, withContext, assign } from 'xstate'
+import { createMachine, assign } from 'xstate'
 
 export const COUNTER_EVENTS = {
   INCREMENT: 'INCREMENT',

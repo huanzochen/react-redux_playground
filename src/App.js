@@ -24,14 +24,6 @@ import ItemPagePC from './checkoutShop/item/pc'
 
 import './App.css'
 
-import styled from 'styled-components'
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
 function App() {
   return (
     <Router>

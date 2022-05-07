@@ -1,5 +1,4 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 import ItemPageWrapper from '../shared/itemPageWrapper'

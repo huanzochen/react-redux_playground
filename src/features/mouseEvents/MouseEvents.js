@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState, useRef } from 'react'
+import { useEffect, useCallback, useRef } from 'react'
 import styled from 'styled-components'
 
 const StyledMouseEvents = styled.div`
@@ -83,6 +83,7 @@ function MouseEvents() {
       emojiRef.current.addEventListener('mouseleave', handleMouseLeaveEvent)
       return () => {
         emojiRef.current.removeEventListener('mouseenter', handleMouseEnterEvent)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         emojiRef.current.removeEventListener('mouseleave', handleMouseLeaveEvent)
       }
     }
@@ -90,7 +91,7 @@ function MouseEvents() {
 
   const [emoji2Ref] = useHookWithRefCallback()
 
-  const emoji3Ref = useRef(null)
+  const emoji3Ref = useRef(false)
 
   useEffect(() => {
     if (emoji3Ref && emoji3Ref.current) {
@@ -105,9 +106,12 @@ function MouseEvents() {
       emoji3Ref.current.addEventListener('mouseleave', handleMouseLeaveEvent)
       return () => {
         emoji3Ref.current.removeEventListener('mouseover', handleMouseEnterEvent)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         emoji3Ref.current.removeEventListener('mouseleave', handleMouseLeaveEvent)
       }
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [emoji3Ref, emoji3Ref.current])
 
   return (

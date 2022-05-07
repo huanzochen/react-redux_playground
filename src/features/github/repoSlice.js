@@ -39,12 +39,12 @@ const repoSlice = createSlice({
   },
 })
 
-export const {} = repoSlice.actions
+// export const {} = repoSlice.actions
 
 export default repoSlice.reducer
 
 export const {
-  selectAll: selectAll,
+  selectAll,
   selectEntities: selectAllRepos,
   selectById: selectRepoById,
   selectIds: selectRepoIds,

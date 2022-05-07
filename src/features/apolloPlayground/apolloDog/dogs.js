@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { GET_DOG_INFO } from '../graphqlData/queries/dogs'
 import QueryResult from '../utils/query-result'
 
-import { StyledDogs, StyledDog } from './styleDogs'
+// import { StyledDogs, StyledDog } from './styleDogs'
 
 const Dogs = ({ onDogSelected }) => {
   const { loading, error, data } = useQuery(GET_DOG_INFO)

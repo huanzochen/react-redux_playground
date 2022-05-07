@@ -2,7 +2,12 @@ import { useState, useRef } from 'react'
 
 import classnames from 'classnames'
 import { useIntersection } from './IntersectionObserver'
-import { StyledImage, Mockup, Mockup2, Img } from './StyleImage'
+import {
+  StyledImage,
+  Mockup,
+  //  Mockup2,
+  Img,
+} from './StyleImage'
 
 function Image({ id, src, height, width }) {
   const [isInView, setIsInView] = useState(false)

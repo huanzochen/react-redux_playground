@@ -1,4 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, {
+  useState,
+  useEffect,
+  // useRef
+} from 'react'
 import { nanoid } from '@reduxjs/toolkit'
 
 /**
@@ -11,7 +15,7 @@ import { nanoid } from '@reduxjs/toolkit'
  */
 
 function ScrollEvent() {
-  const [fakeData, setFakeData] = useState([
+  const [fakeData] = useState([
     'sadassa',
     'sadassa',
     'sadassa',

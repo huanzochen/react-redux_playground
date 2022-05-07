@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Router as ClientRouter, StaticRouter } from 'react-router-dom'
+import { Router as ClientRouter } from 'react-router-dom'
 import { $history } from '../../utils/common/history'
 
 const Router = ({ serverSide, location, children }) => {

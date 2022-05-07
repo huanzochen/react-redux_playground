@@ -1,4 +1,4 @@
-import { createMachine, withContext, assign } from 'xstate'
+import { createMachine, assign } from 'xstate'
 
 export const LIGHT_STATES = {
   RED: 'red',

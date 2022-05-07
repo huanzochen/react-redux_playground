@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 
 function throttle(func, delay) {
+  // eslint-disable-next-line
   let timeout = null
   let inThrottle = false
   return function () {
