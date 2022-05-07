@@ -19,9 +19,7 @@ const Canvas = (props) => {
       let y = getRandomRangeNumber(radius, height - radius)
       circleArray.current.push(new Circle(x, y, dx, dy, radius, width, height))
     }
-  }, [])
-
-  // console.log('circleArray.current:', circleArray.current)
+  }, [width, height])
 
   useEffect(() => {
     init()
@@ -44,7 +42,7 @@ const Canvas = (props) => {
     }
 
     // eslint-disable-next-line
-  }, [])
+  }, [width, height])
 
   return <canvas ref={canvasRef} width={width} height={height}></canvas>
 }

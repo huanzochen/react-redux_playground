@@ -3,10 +3,12 @@ import { CanvasContext } from './'
 
 const CanvasProvider = ({ children }) => {
   const canvasContainerRef = useRef(null)
+  const mouseRef = useRef({ x: null, y: null })
 
   const getContextValue = () => {
     return {
       canvasContainerRef,
+      mouseRef,
     }
   }
 
