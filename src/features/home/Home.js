@@ -27,6 +27,7 @@ function Home() {
         <Link to="/xstate">XState</Link>
         <Link to="/ellipsis">Ellipsis</Link>
         <Link to="/effects">Effects</Link>
+        <Link to="/canvasInReact">Canvas-React</Link>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>
@@ -46,12 +47,12 @@ function Home() {
         <a href="/div3wayscenter/div3wayscenter3.html">div3wayscenter3</a>
         <a href="/div3wayscenter/div3wayscenter4.html">div3wayscenter4</a>
         <a href="/bubbling/bubbling.html">bubbling</a>
-        <a href="/canvas/beginner/index.html">canvas-beginner</a>
-        <a href="/canvas/animations/index.html">canvas-animations</a>
-        <a href="/canvas/animations_2/index.html">canvas-animations_2</a>
-        <a href="/canvas/particles/index.html">canvas-particles</a>
-        <a href="/canvas/confetti_mine/index.html">canvas-confetti_mine</a>
-        <a href="/canvas/confetti_button/index.html">canvas-confetti_button</a>
+        <a href="/canvas/beginner/index.html">Canvas-beginner</a>
+        <a href="/canvas/animations/index.html">Canvas-animations</a>
+        <a href="/canvas/animations_2/index.html">Canvas-animations_2</a>
+        <a href="/canvas/particles/index.html">Canvas-particles</a>
+        <a href="/canvas/confetti_mine/index.html">Canvas-confetti_mine</a>
+        <a href="/canvas/confetti_button/index.html">Canvas-confetti_button</a>
       </StaticPage>
     </StyledHome>
   )

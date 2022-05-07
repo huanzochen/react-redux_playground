@@ -19,6 +19,7 @@ import AddOnList from './features/addOnList'
 import XState from './features/xState'
 import Ellipsis from './features/ellipsis'
 import Effects from './features/effects'
+import CanvasInReact from './features/canvasInReact'
 
 import ItemPagePC from './checkoutShop/item/pc'
 
@@ -66,7 +67,9 @@ function App() {
           <Route path="/effects">
             <Effects />
           </Route>
-          {/* </Wrapper> */}
+          <Route path="/canvasInReact">
+            <CanvasInReact />
+          </Route>
         </Switch>
       </div>
     </Router>
