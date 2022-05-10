@@ -28,6 +28,7 @@ function Home() {
         <Link to="/ellipsis">Ellipsis</Link>
         <Link to="/effects">Effects</Link>
         <Link to="/canvasInReact">Canvas-React</Link>
+        <Link to="/canvasInReact-hook">Canvas-React(Hook)</Link>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>
