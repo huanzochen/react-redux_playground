@@ -20,6 +20,13 @@ const Ellipsis = () => {
         <div className={styles.a_ellipsis}>我已在佛前求了五百年</div>
         <div className={styles.a_ellipsis}>求他讓我們結一段塵緣</div>
       </div>
+      <div className={styles.test2}>
+        <div className={styles.name}>
+          {
+            '我是超長的全家配送店名我他媽常到爆炸你一定切不到我為我是超級世界無敵第一配送我是超長的全家配送店名我他媽常到爆炸你一定切不到我為我是超級世界無敵第一配送'
+          }
+        </div>
+      </div>
     </>
   )
 }
