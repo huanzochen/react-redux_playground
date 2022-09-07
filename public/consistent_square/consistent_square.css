@@ -1,6 +1,8 @@
 .container{
   position: relative;
-  width: 50%;
+  width: 40%;
+  max-width: 400px;
+  max-height: 400px;
 
   background-color: antiquewhite;
 }
@@ -22,7 +24,7 @@
 
 img {
   position: absolute;
-  overflow:hidden;
+  overflow: hidden;
 
   max-width: 100%;
   max-height: 100%;
