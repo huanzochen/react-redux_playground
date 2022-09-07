@@ -54,6 +54,7 @@ function Home() {
         <a href="/canvas/particles/index.html">Canvas-particles</a>
         <a href="/canvas/confetti_mine/index.html">Canvas-confetti_mine</a>
         <a href="/canvas/confetti_button/index.html">Canvas-confetti_button</a>
+        <a href="/consistent_square/index.html">Consistent square</a>
       </StaticPage>
     </StyledHome>
   )
