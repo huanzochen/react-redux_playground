@@ -1,7 +1,12 @@
+/* https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
+
+
 .container {
   display: inline-block;
   position: relative;
   width: 50%;
+
+  background-color: silver/* show me! */
 }
 
 .dummy {
@@ -10,9 +15,17 @@
 
 .element {
   position: absolute;
+
+  max-width: 100%;
+  max-height: 100%;
+
+
+  margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+
+
   background-color: silver/* show me! */
 }
