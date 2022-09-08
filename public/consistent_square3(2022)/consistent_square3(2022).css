@@ -1,0 +1,31 @@
+/* https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
+
+
+.container {
+  position: relative;
+  width: 80%;
+
+  aspect-ratio: 1/1;
+
+  max-width: 400px;
+  max-height: 400px;
+
+  background-color: antiquewhite;
+}
+
+.element {
+  position: absolute;
+
+  max-width: 100%;
+  max-height: 100%;
+
+
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+
+  background-color: silver/* show me! */
+}
