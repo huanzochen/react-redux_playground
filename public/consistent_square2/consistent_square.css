@@ -29,3 +29,9 @@
 
   background-color: silver/* show me! */
 }
+
+@media screen and (max-width: 1250px) {
+  .container {
+    width: 100%;
+  }
+}

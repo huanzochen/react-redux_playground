@@ -21,6 +21,7 @@ import Ellipsis from './features/ellipsis'
 import Effects from './features/effects'
 import CanvasInReact from './features/canvasInReact'
 import CanvasInReactHook from './features/canvasInReactHook'
+import IUseRef from './features/iUseRef'
 
 import ItemPagePC from './checkoutShop/item/pc'
 
@@ -73,6 +74,9 @@ function App() {
           </Route>
           <Route path="/canvasInReact-hook">
             <CanvasInReactHook />
+          </Route>
+          <Route path="/i_useref">
+            <IUseRef />
           </Route>
         </Switch>
       </div>

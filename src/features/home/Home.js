@@ -29,6 +29,7 @@ function Home() {
         <Link to="/effects">Effects</Link>
         <Link to="/canvasInReact">Canvas-React</Link>
         <Link to="/canvasInReact-hook">Canvas-React(Hook)</Link>
+        <Link to="/i_useref">useRef initial</Link>
       </DynamicPage>
       <StaticPage>
         <div>Static Page</div>
