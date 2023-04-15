@@ -58,6 +58,7 @@ function Home() {
         <a href="/consistent_square/index.html">Consistent square</a>
         <a href="/consistent_square2/index.html">Consistent square2</a>
         <a href="/consistent_square3(2022)/index.html">Consistent square3(2022)</a>
+        <a href="/css/overflow.html">overflow</a>
       </StaticPage>
     </StyledHome>
   )

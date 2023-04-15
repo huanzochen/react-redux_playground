@@ -38,7 +38,7 @@ export const StaticPage = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  height: 20vh;
+  height: 40vh;
   font-size: 20px;
   background: ${color.third};
   border-radius: 3px;
