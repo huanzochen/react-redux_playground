@@ -1,0 +1,10 @@
+FROM node:gallium-alpine3.16
+
+COPY ./ /mall-src
+WORKDIR /mall-src
+RUN yarn && yarn build
+RUN mv ./build ../mall-build
+WORKDIR /
+RUN rm -rf /mall-src
+RUN yarn global add serve
+CMD serve -s mall-build/ -l 3000
