@@ -6,8 +6,74 @@
 
 <body>
 <section>
-    <div class="container">this is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test message</div>
+    <div class="test">this is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test messagethis is a test message</div>
 </section>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--AD3--><!-- Footer-RWD-2nd -->
+<section>
+  <div class="googlead" style="display: block;text-align: center;">
+    <ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="test"
+     data-ad-slot="test"></ins>
+  </div>
+</section>
+<script>
+     //will push this ad after load googlead elements
+     //(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div id="ad1_inline" style="display: none;"></div>
+<div id="ad1_footer" style="display: none;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--AD3--><!-- Footer-RWD-2nd -->
+    <section>
+    <div class="googlead" style="display: block;text-align: center;">
+      <ins class="adsbygoogle"
+       style="display:inline-block;width:300px;height:250px"
+       data-ad-client="test"
+       data-ad-slot="test"></ins>
+    </div>
+    </section>
+    <script>
+    //will push this ad after load googlead elements
+    //(adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<script type="text/javascript">
+    window.onload = function() {
+        console.log('onload')
+        document.getElementById('ad1_inline').appendChild(document.getElementById('ad1_footer'));
+        document.getElementById('ad1_inline').style.display = 'block';
+        document.getElementById('ad1_footer').style.display = '';
+    }
+</script>
+
+
+<div class="googlead_section" style="display: none;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--AD3--><!-- Footer-RWD-2nd -->
+    <section>
+    <div class="googlead" style="display: block;text-align: center;">
+      <ins class="adsbygoogle"
+       style="display:inline-block;width:300px;height:250px"
+       data-ad-client="test"
+       data-ad-slot="test"></ins>
+    </div>
+    </section>
+    <script>
+    //will push this ad after load googlead elements
+    //(adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+<!-- document.getElementsByClassName('googlead_section')[0].style.display='block' -->
+
+
+
+
 
 </body>
 
