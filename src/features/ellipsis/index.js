@@ -1,5 +1,13 @@
 import styles from './ellipsis.module.scss'
 
+const breadcrumb = [
+  '樂天首頁',
+  '電視與家電品牌',
+  '遊戲娛樂機種',
+  'Playstation 系列',
+  'PS5 極致尊貴Tiffany day 特仕版本, 價值$10,0000,0000, 價值$10,0000,0000, 價值$10,0000,0000, 價值$10,0000,0000, 價值$10,0000,0000, 價值$10,0000,0000',
+]
+
 const Ellipsis = () => {
   return (
     <>
@@ -7,11 +15,16 @@ const Ellipsis = () => {
       display: block 本身就可以做到 ellipsis, 如果 inline 要做到，那他的父親必須是 flex, why?
       <div className={styles.parent}>
         <div className={styles.ellipsis_box}>
-          {/* <a className={styles.label}>
+          <a className={styles.label}>
             one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen
             sixteen seventeen eightteen nineteen twenty twentyone twentytwo twentythree twentyfour
             twentyfive.
-          </a> */}
+          </a>
+          <a className={styles.label}>
+            one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen
+            sixteen seventeen eightteen nineteen twenty twentyone twentytwo twentythree twentyfour
+            twentyfive.
+          </a>
         </div>
       </div>
       <div className={styles.test}>
@@ -27,6 +40,22 @@ const Ellipsis = () => {
           }
         </div>
       </div>
+      {/* this is a real example that need to test */}
+      <ul className={styles.ul_element}>
+        {breadcrumb.map((item, index) => {
+          return <li className={styles.li_element}>{`${item}>`}</li>
+        })}
+      </ul>
+      {/* this is a solution to solve this real example */}
+      <ul className={styles.ellipsis_box_ul}>
+        {breadcrumb.map((item, index) => {
+          const final = index === breadcrumb.length - 1
+          if (!final) return <li className={styles.label_li}>{`${item}>`}</li>
+          else {
+            return <li className={styles.final}>{`${item}>`}</li>
+          }
+        })}
+      </ul>
     </>
   )
 }
