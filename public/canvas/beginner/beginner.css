@@ -3,6 +3,5 @@ body {
 }
 
 canvas {
-  border: 1px solid black;
+  display: block;
 }
-/*# sourceMappingURL=beginner.css.map */
